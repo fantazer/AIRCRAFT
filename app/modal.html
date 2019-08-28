@@ -46,6 +46,7 @@
             <div class="btn--md btn--mark modal-get" data-modal="order">Заявка | data-modal="code "</div>
         </div>
     </div>
+    <!--block footer-->
     <div class="footer">
         <div class="footer-spin" style="background-image:url('img/spin.png')">
             <div class="main-cont">
@@ -71,49 +72,46 @@
             </div>
         </div>
     </div>
-    <!--block footer-->
     <!--block footer end-->
     <div class="modal-layer">
         <div class="modal-filter"></div>
         <div class="modal-wrap">
-            <div class="modal" data-modal="order">
+            <!--warranty-->
+            <div class="modal modal--seal" data-modal="warranty">
+                <div class="modal-content">
+                    <img class="seal" src="img/seal.png" alt="" />
+                    <div class="modal-close">
+                        <svg class="icon">
+                            <use xlink:href="#close-fat"></use>
+                        </svg>
+                    </div>
+                    <div class="modal-title">Гарантия</div>
+                    <div class="modal-text text">
+                        <p>Изготовитель предоставляет гарантию на всю продукцию сроком 12 месяцев.</p>
+                        <p>Гарантийные обязательства распространяются на все детали, поставляемые в наборе при условии правильной сборки и эксплуатации модели.</p>
+                        <div class="btn--md btn--mark modal-send modal-hide">ОК</div>
+                    </div>
+                </div>
+            </div>
+            <!--contact-->
+            <div class="modal" data-modal="contact">
                 <div class="modal-content">
                     <div class="modal-close">
                         <svg class="icon">
-                            <use xlink:href="#close"></use>
+                            <use xlink:href="#close-fat"></use>
                         </svg>
                     </div>
-                    <div class="modal-title">Оставьте заявку</div>
-                    <div class="modal-text">Обращаетесь к нам впервые?
-                        <br>Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!</div>
-                    <form class="validate-form" action="javascript:void(null);">
-                        <div class="input-row">
-                            <input class="input" type="text" name="name" placeholder="Ваше имя" />
+                    <div class="modal-title">Контакты</div>
+                    <div class="modal-text">
+                        <div class="modal-contact">
+                            <div class="modal-contact__type">Телефон:</div>
+                            <a class="modal-contact__val" href="tel:8 (495) 225 54 66">8 (495) 225 54 66</a>
                         </div>
-                        <div class="input-row">
-                            <input class="input" type="text" name="phone" placeholder="Ваш телефон" />
+                        <div class="modal-contact">
+                            <div class="modal-contact__type">E-mail:</div>
+                            <a class="modal-contact__val" href="mailto:info@vlasov-rc.com">info@vlasov-rc.com</a>
                         </div>
-                        <div class="input-row">
-                            <textarea class="input" name="info" cols="30" rows="5" placeholder="Сообщение"></textarea>
-                        </div>
-                        <div class="agree-row">
-                            <div class="check-el">
-                                <label class="style-label style-label--checkbox">
-                                    <input class="sytle-input" type="checkbox" name="agree" />
-                                    <div class="sytle-input-element">
-                                        <svg class="icon-check">
-                                            <use xlink:href="#checked"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="sytle-input-text"></div>
-                                </label>
-                            </div>
-                            <div class="agree-row__text">Согласен с
-                                <a href="#">условиями обработки персональных данных</a>
-                            </div>
-                        </div>
-                        <input class="modal-send" type="submit" value="Отправить заявку" />
-                    </form>
+                    </div>
                 </div>
             </div>
             <!--success message-->
@@ -127,7 +125,58 @@
             </div>
         </div>
     </div>
-    <a class="modal-get" href="#" data-modal="order">Открыть модальное окно</a>
+    <div class="modal-layer">
+        <div class="modal-filter"></div>
+        <div class="modal-wrap">
+            <!--warranty-->
+            <div class="modal modal--seal" data-modal="warranty">
+                <div class="modal-content">
+                    <img class="seal" src="img/seal.png" alt="" />
+                    <div class="modal-close">
+                        <svg class="icon">
+                            <use xlink:href="#close-fat"></use>
+                        </svg>
+                    </div>
+                    <div class="modal-title">Гарантия</div>
+                    <div class="modal-text text">
+                        <p>Изготовитель предоставляет гарантию на всю продукцию сроком 12 месяцев.</p>
+                        <p>Гарантийные обязательства распространяются на все детали, поставляемые в наборе при условии правильной сборки и эксплуатации модели.</p>
+                        <div class="btn--md btn--mark modal-send modal-hide">ОК</div>
+                    </div>
+                </div>
+            </div>
+            <!--contact-->
+            <div class="modal" data-modal="contact">
+                <div class="modal-content">
+                    <div class="modal-close">
+                        <svg class="icon">
+                            <use xlink:href="#close-fat"></use>
+                        </svg>
+                    </div>
+                    <div class="modal-title">Контакты</div>
+                    <div class="modal-text">
+                        <div class="modal-contact">
+                            <div class="modal-contact__type">Телефон:</div>
+                            <a class="modal-contact__val" href="tel:8 (495) 225 54 66">8 (495) 225 54 66</a>
+                        </div>
+                        <div class="modal-contact">
+                            <div class="modal-contact__type">E-mail:</div>
+                            <a class="modal-contact__val" href="mailto:info@vlasov-rc.com">info@vlasov-rc.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--success message-->
+            <div class="modal" data-modal="truemessage">
+                <div class="modal-content modal-content--true">
+                    <svg class="icon">
+                        <use xlink:href="#interface"></use>
+                    </svg>
+                    <div class="modal-text-true">Ваша заявка принята</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--build:js js/combined.js-->
     <script src="bower/jquery/dist/jquery.js"></script>
     <script src="bower/slick-carousel/slick/slick.js"></script>

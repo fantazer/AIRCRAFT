@@ -40,8 +40,8 @@
                         <a class="head-nav__el" href="#">запчасти</a>
                         <a class="head-nav__el" href="#">лазерная резка</a>
                         <a class="head-nav__el" href="#">доставка</a>
-                        <a class="head-nav__el" href="#">гарантия</a>
-                        <a class="head-nav__el" href="#">контакты</a>
+                        <div class="modal-get head-nav__el" data-modal="warranty">гарантия</div>
+                        <div class="modal-get head-nav__el" data-modal="contact">контакты</div>
                     </div>
                 </div>
             </div>
@@ -56,6 +56,7 @@
                     <br>российский конструктор авиамоделей, пилот</div>
             </div>
         </div>
+        <!--block footer-->
         <div class="footer">
             <div class="footer-spin" style="background-image:url('img/spin.png')">
                 <div class="main-cont">
@@ -81,8 +82,59 @@
                 </div>
             </div>
         </div>
-        <!--block footer-->
         <!--block footer end-->
+        <div class="modal-layer">
+            <div class="modal-filter"></div>
+            <div class="modal-wrap">
+                <!--warranty-->
+                <div class="modal modal--seal" data-modal="warranty">
+                    <div class="modal-content">
+                        <img class="seal" src="img/seal.png" alt="" />
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close-fat"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Гарантия</div>
+                        <div class="modal-text text">
+                            <p>Изготовитель предоставляет гарантию на всю продукцию сроком 12 месяцев.</p>
+                            <p>Гарантийные обязательства распространяются на все детали, поставляемые в наборе при условии правильной сборки и эксплуатации модели.</p>
+                            <div class="btn--md btn--mark modal-send modal-hide">ОК</div>
+                        </div>
+                    </div>
+                </div>
+                <!--contact-->
+                <div class="modal" data-modal="contact">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close-fat"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Контакты</div>
+                        <div class="modal-text">
+                            <div class="modal-contact">
+                                <div class="modal-contact__type">Телефон:</div>
+                                <a class="modal-contact__val" href="tel:8 (495) 225 54 66">8 (495) 225 54 66</a>
+                            </div>
+                            <div class="modal-contact">
+                                <div class="modal-contact__type">E-mail:</div>
+                                <a class="modal-contact__val" href="mailto:info@vlasov-rc.com">info@vlasov-rc.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--success message-->
+                <div class="modal" data-modal="truemessage">
+                    <div class="modal-content modal-content--true">
+                        <svg class="icon">
+                            <use xlink:href="#interface"></use>
+                        </svg>
+                        <div class="modal-text-true">Ваша заявка принята</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!--build:js js/combined.js-->
     <script src="bower/jquery/dist/jquery.js"></script>

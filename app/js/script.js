@@ -61,7 +61,7 @@ $('.modal-get').click(function () {
 	initModal(currentModal);
 });
 
-$('.modal-layer , .modal-close').click(function () {
+$('.modal-layer, .modal-close, .modal-hide').click(function () {
 	closeModal();
 });
 //modals===end

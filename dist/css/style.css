@@ -326,12 +326,14 @@ body {
   }
 }
 .type--lg,
-h2 {
+h2,
+.modal-contact__val {
   font-size: 24px;
 }
 @media only screen and (max-width: 768px) {
   .type--lg,
-  h2 {
+  h2,
+  .modal-contact__val {
     font-size: 18px;
   }
 }
@@ -347,12 +349,14 @@ h2 {
 }
 .type--xl,
 h1,
+.modal-title,
 .section-title {
   font-size: 50px;
 }
 @media only screen and (max-width: 768px) {
   .type--xl,
   h1,
+  .modal-title,
   .section-title {
     font-size: 28px;
   }
@@ -374,10 +378,10 @@ a:visiter {
   color: $blue;
 }
 .link--mark:hover {
-  color: #22577a;
+  color: #a07800;
 }
 .link--mark:visiter {
-  color: #173b52;
+  color: #6d5200;
 }
 .link--main {
   color: #111;
@@ -450,7 +454,7 @@ a:visiter {
 .btn--mark,
 .modal-send {
   color: #111;
-  background: #3a90c8;
+  background: #ffc107;
 }
 .btn--mark .nav-icon,
 .modal-send .nav-icon {
@@ -458,19 +462,15 @@ a:visiter {
 }
 .btn--mark:hover,
 .modal-send:hover {
-  background-color: #22577a;
+  background-color: #ffce3a;
 }
 .btn--mark:active,
 .modal-send:active {
-  background-color: #22577a;
+  background-color: #ffce3a;
 }
 .btn--mark input[type="submit"],
 .modal-send input[type="submit"] {
   border: 0;
-}
-.btn--mark .nav-icon,
-.modal-send .nav-icon {
-  fill: #fff;
 }
 .btn--white {
   color: #111;
@@ -485,7 +485,7 @@ a:visiter {
   color: #fff;
 }
 .btn--white:active {
-  background-color: #22577a;
+  background-color: #a07800;
 }
 .btn--white input[type="submit"] {
   border: 0;
@@ -503,10 +503,10 @@ a:visiter {
   background-color: #fff;
 }
 .btn--light:hover {
-  border: 1px solid #3a90c8;
+  border: 1px solid #ffc107;
 }
 .btn--light .nav-icon {
-  fill: #3a90c8;
+  fill: #ffc107;
 }
 .btn--icon {
   display: -webkit-box;
@@ -570,7 +570,7 @@ a:visiter {
 .input:focus,
 .textarea:focus,
 .select:focus {
-  border: 1px solid #3a90c8;
+  border: 1px solid #ffc107;
   background: #fff;
 }
 .style-label {
@@ -605,7 +605,7 @@ a:visiter {
   cursor: pointer;
 }
 .check-el .sytle-input-element:hover {
-  border: 1px solid #3a90c8;
+  border: 1px solid #ffc107;
 }
 .check-el .icon-check {
   display: none;
@@ -624,8 +624,8 @@ a:visiter {
       -ms-flex-align: center;
           align-items: center;
   color: #fff;
-  background: #3a90c8;
-  border: 1px solid #3a90c8;
+  background: #ffc107;
+  border: 1px solid #ffc107;
 }
 .check-el .sytle-input:checked ~ .sytle-input-element .icon-check {
   display: block;
@@ -677,7 +677,7 @@ a:visiter {
   border-radius: 50%;
   width: 16px;
   height: 16px;
-  background: #3a90c8;
+  background: #ffc107;
 }
 .sytle-input-text {
   color: #111;
@@ -686,7 +686,7 @@ a:visiter {
   line-height: 1.6;
 }
 .sytle-input-text a {
-  color: #3a90c8;
+  color: #ffc107;
 }
 .input-row-half {
   display: -webkit-box;
@@ -872,7 +872,8 @@ body {
   opacity: 0.1;
   -webkit-transition: -webkit-transform 0.8s, opacity 1s;
           transition: transform 0.8s, opacity 1s;
-  max-width: 470px;
+  width: 570px;
+  max-width: 570px;
 }
 @media only screen and (max-width: 768px) {
   .modal {
@@ -888,8 +889,9 @@ body {
 .modal-content {
   background: #fff;
   position: relative;
-  padding: 40px;
+  padding: 40px 15%;
   border-radius: 10px;
+  position: relative;
 }
 @media only screen and (max-width: 640px) {
   .modal-content {
@@ -923,10 +925,9 @@ body {
   cursor: pointer;
 }
 .modal-close .icon {
-  width: 12px;
-  height: 12px;
+  width: 20px;
+  height: 20px;
   fill: #111;
-  opacity: 0.3;
 }
 .modal-open {
   overflow: hidden;
@@ -960,6 +961,7 @@ body {
   margin-bottom: 20px;
   text-align: center;
   color: #111;
+  font-family: "Roboto Slab";
 }
 @media only screen and (max-width: 768px) {
   .modal-title {
@@ -968,7 +970,7 @@ body {
 }
 .modal-text {
   text-align: center;
-  margin: 20px auto 40px auto;
+  margin: 20px auto 20px auto;
   font-size: 16px;
   line-height: 1.2;
   color: #5f5f5f;
@@ -985,7 +987,8 @@ body {
   margin-bottom: 20px;
 }
 .modal-send {
-  width: 100%;
+  min-width: 120px;
+  margin: 20px auto 0 auto;
 }
 .agree-row {
   display: -webkit-box;
@@ -1315,6 +1318,9 @@ select.select-beauty {
 .head-nav__el {
   text-transform: uppercase;
   color: #111;
+}
+.head-nav__el:hover {
+  cursor: pointer;
 }
 .head-nav__el--active {
   font-weight: 700;
@@ -1844,8 +1850,31 @@ thead td {
 .payment__el img {
   width: 100%;
 }
+.text p {
+  line-height: 1.6;
+}
 .text a {
   text-decoration: underline;
+}
+.seal {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.modal-contact {
+  margin-bottom: 20px;
+}
+.modal-contact:last-child {
+  margin-bottom: 0;
+}
+.modal-contact__type {
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.modal-contact__val {
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  color: #000;
+  font-family: "Roboto Slab";
 }
 @-webkit-keyframes slideInDown {
   from {

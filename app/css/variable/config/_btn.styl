@@ -34,17 +34,15 @@
 .btn--mark
 	@extend .btn
 	color black
-	background $mark
+	background $yellow
 	.nav-icon
 		fill white
 	&:hover
-		background-color darken($mark,20)
+		background-color lighten($yellow,10)
 	&:active
-		background-color darken($mark,20)
+		background-color lighten($yellow,10)
 	input[type="submit"]
 		border 0
-	.nav-icon
-		fill white
 
 .btn--white
 	@extend .btn

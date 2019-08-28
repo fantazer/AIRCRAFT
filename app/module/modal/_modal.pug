@@ -2,34 +2,34 @@ mixin modal()
 	.modal-layer
 		.modal-filter
 		.modal-wrap
-			.modal(data-modal="order")
+			//warranty
+			.modal.modal--seal(data-modal="warranty")
+				.modal-content
+					img(src="img/seal.png", alt="" class="seal")
+					.modal-close
+						+icon("close-fat","icon")
+					.modal-title Гарантия
+					.modal-text.text
+						p Изготовитель предоставляет гарантию на всю продукцию сроком 12 месяцев.
+						p Гарантийные обязательства распространяются на все детали, поставляемые в наборе при условии правильной сборки и эксплуатации модели.
+						.btn--md.btn--mark.modal-send.modal-hide ОК
+			//contact
+			.modal(data-modal="contact")
 				.modal-content
 					.modal-close
-						+icon("close","icon")
-					.modal-title Оставьте заявку
-					.modal-text Обращаетесь к нам впервые? <br> Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!
-					form.validate-form( action="javascript:void(null);")
-						.input-row
-							input(type="text" name="name" placeholder="Ваше имя").input
-						.input-row
-							input(type="text" name="phone" placeholder="Ваш телефон").input
-						.input-row
-							textarea(name="info", cols="30", rows="5" placeholder="Сообщение").input
-						.agree-row
-							.check-el
-								label.style-label.style-label--checkbox
-									input(type="checkbox" name="agree").sytle-input
-									.sytle-input-element
-										+icon("checked","icon-check")
-									.sytle-input-text=text
-							.agree-row__text Согласен с
-								a(href="#") условиями обработки персональных данных
-						input(type="submit" value="Отправить заявку").modal-send
+						+icon("close-fat","icon")
+					.modal-title Контакты
+					.modal-text
+						.modal-contact
+							.modal-contact__type Телефон:
+							a(href="tel:8 (495) 225 54 66").modal-contact__val 8 (495) 225 54 66
+						.modal-contact
+							.modal-contact__type E-mail:
+							a(href="mailto:info@vlasov-rc.com").modal-contact__val info@vlasov-rc.com
 			//success message
 			.modal(data-modal="truemessage")
 				.modal-content.modal-content--true
 					+icon("interface","icon")
 					.modal-text-true Ваша заявка принята
 
-	a(href="#" data-modal="order").modal-get Открыть модальное окно
 

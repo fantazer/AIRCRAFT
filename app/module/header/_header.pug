@@ -13,9 +13,9 @@ mixin header()
 						"запчасти",
 						"лазерная резка",
 						"доставка",
-						"гарантия",
-						"контакты",
 						];
 					each item,i in items
 						a(href="#" class=i === 1 ? 'head-nav__el--active' : '').head-nav__el #{item}
+					.modal-get.head-nav__el(data-modal="warranty") гарантия
+					.modal-get.head-nav__el(data-modal="contact") контакты
 	//block header end
