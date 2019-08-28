@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="6605.998" height="6605.999" viewBox="0 0 6605.998 6605.999">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="6605.998" height="6605.999" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Clip_2" data-name="Clip 2" d="M0,0H6606V6606H0Z" transform="translate(0 0.001)" fill="none"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="710" cy="710" r="710" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffeeb5" stop-opacity="0.769"/>
+      <stop offset="1" stop-color="#ffe69a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="Images_Yellow-Circle" data-name="Images / Yellow-Circle" clip-path="url(#clip-path)">
+    <g id="Group_3" data-name="Group 3" transform="translate(0 -0.001)">
+      <path id="Clip_2-2" data-name="Clip 2" d="M0,0H6606V6606H0Z" transform="translate(0 0.001)" fill="none"/>
+      <g id="Group_3-2" data-name="Group 3" clip-path="url(#clip-path-2)">
+        <path id="Fill_1" data-name="Fill 1" d="M3303,0c1824.2,0,3303,1478.8,3303,3303s-1478.8,3303-3303,3303S0,5127.2,0,3303,1478.8,0,3303,0" transform="translate(0 0.001)" fill="#ffc107"/>
+        <circle id="Oval" cx="710" cy="710" r="710" transform="translate(2591 5186)" fill="url(#radial-gradient)"/>
+      </g>
+    </g>
+  </g>
+</svg>

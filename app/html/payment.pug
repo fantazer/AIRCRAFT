@@ -1,0 +1,27 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page.page--main
+	+header()
+	.video-bg
+	.video-bg--filter
+	.content
+		.main-page
+			.main-cont
+				.section-title Оплата и доставка
+				.section-title-sub Мы принимаем
+				.payment
+					.payment__el
+						img(src="img/visa-pay-logo.svg", alt="")
+					.payment__el
+						img(src="img/mastercard.svg", alt="")
+					.payment__el
+						img(src="img/paypal-logo.svg", alt="")
+					.payment__el
+						img(src="img/yandex-pay-logo.svg", alt="")
+				.section-text.text
+					p Доставка <a href="#">наборов осуществляется</a> в любую точку России и мира Почтой России, EMS или транспортной компанией. Стоимость доставки будет рассчитана при <a href="#">формировании заказа</a>.
+
+	+footer()
+include ./block_html/_script.pug
+

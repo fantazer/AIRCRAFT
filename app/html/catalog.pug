@@ -1,0 +1,49 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	.header--up
+		+header()
+	.content
+		.section-yellow(style="background-image:url('img/round.svg')")
+			.main-cont
+				.section-title KIT*-Наборы
+				//.section-title-sub Специальная цена на фанеру и бальзу при заказе лазерной резки! Это выгодно!
+				.section-text
+					p Любите собирать модели? Вы пришли по адресу! Если вы ни разу не собирали модель своими руками – настало время попробовать! Когда вы построите самолет из нашего KIT-набора и поднимите егов воздух – вы получите ни с чем не сравнимый заряд позитива!
+					p * KIT(англ.) – набор для сборки
+				.slider-wrap.slider-wrap--inarrow
+					.slider-control.slider-control--left
+						+icon("arrow-left--height","icon")
+					.slider-control.slider-control--right
+						+icon("arrow-right--height","icon")
+					.item-slider.slider-item
+						- for (var i=0;i<8;i++)
+							.item-wrap
+								.item-img(style="background-image:url('img/item.png')")
+								.item-title MX2 mkII
+			.arrow
+				+icon("arrow-down","icon")
+		.section
+			.main-cont
+				.advant
+					.advant__el
+						.advant__el-icon
+							+icon("mount--color","icon")
+						.advant__el-title Крепко и с душой
+						.advant__el-line
+						.advant__el-text Никто не построит для вас модель так, как вы сами
+					.advant__el
+						.advant__el-icon
+							+icon("pan--color","icon")
+						.advant__el-title Строится легко и с удовольствием
+						.advant__el-line
+						.advant__el-text Детали стыкуются идеально, бальзовая обшивка уже вырезана по размерам,  в набор включены стапели для сборки крыльев и фюзеляжа
+					.advant__el
+						.advant__el-icon
+							+icon("craft--color","icon")
+						.advant__el-title Починить – не проблема
+						.advant__el-line
+						.advant__el-text Вы всегда можете заказать отдельные позиции из набора, если вам потребуется починить самолет
+	+footer()
+include ./block_html/_script.pug

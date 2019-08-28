@@ -1,0 +1,21 @@
+mixin header()
+	//block header
+	.header
+		.main-cont
+			.head
+				a(href="/").head-logo
+					img(src="img/logo.svg", alt="")
+				.head-nav
+					-
+						var items = [
+						"главная",
+						"cамолеты",
+						"запчасти",
+						"лазерная резка",
+						"доставка",
+						"гарантия",
+						"контакты",
+						];
+					each item,i in items
+						a(href="#" class=i === 1 ? 'head-nav__el--active' : '').head-nav__el #{item}
+	//block header end

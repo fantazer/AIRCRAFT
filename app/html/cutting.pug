@@ -1,0 +1,41 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	.header--up
+		+header()
+	.content
+		.section-yellow(style="background-image:url('img/round.svg')")
+			.main-cont
+				.section-title Лазерная резка
+				.section-title-sub Специальная цена на фанеру и бальзу при заказе лазерной резки! Это выгодно!
+				.section-text
+					p Мы любим у умеем резать материалы для ваших проектов! Принимаем файлы в формате dxf/dwg.			Если вам необходима подготовка файлов к резке (например, у вас есть чертежи авиамодели в формате pdf) мы вам поможем. Стоимость работ по подготовке файлов – 500 рублей за час работы специалиста. Предварительный просчет можно сделать, оставив заявку.
+			.btn-row-mid
+				.btn--md.btn--white Оформить заявку
+			.arrow
+				+icon("arrow-down","icon")
+		.section
+			.main-cont
+				.price-cont
+					.price
+						table
+							thead
+								tr
+									td Толщина материала (фанера, бальза)
+									td До 20 п.м.
+									td От 20 п.м.
+							tbody
+								- for (var i=0;i<10;i++)
+									tr
+										td 2мм
+										td 20
+										td 13
+					.price-info
+						p.type--md <strong>Специальная цена на фанеру и бальзу при заказе лазерной резки! Это выгодно! </strong>
+						p.type--mdx <strong>бальза</strong> <br> 2 мм 100x1000 мм – 90 руб.
+						p.type--mdx <strong>фанера березовая шлифованная</strong> <br> 3 мм 1520х1520 мм – 500 руб.
+
+	+footer()
+
+include ./block_html/_script.pug

@@ -1,0 +1,96 @@
+// ============================ Buttons ============================
+.btn
+	up()
+	tr(all)
+	display inline-block
+	background none
+	border 2px solid black
+	text-align: center
+	font-weight: 700
+	&:hover
+		cursor pointer
+
+.btn--sm
+	@extend .btn
+	font-size 10px
+	padding 5px 10px
+
+.btn--md
+	@extend .btn
+	font-size 16px
+	padding 10px 15px
+
+.btn--lg
+	@extend .btn
+	font-size 20px
+	padding 10px 30px
+
+.btn--mobile
+	@extend .btn
+	+below(768px)
+		width 100%
+		text-align center
+
+.btn--mark
+	@extend .btn
+	color black
+	background $mark
+	.nav-icon
+		fill white
+	&:hover
+		background-color darken($mark,20)
+	&:active
+		background-color darken($mark,20)
+	input[type="submit"]
+		border 0
+	.nav-icon
+		fill white
+
+.btn--white
+	@extend .btn
+	color black
+	background white
+	border-color black
+	.nav-icon
+		fill white
+	&:hover
+		background-color black
+		color white
+	&:active
+		background-color darken($mark,20)
+	input[type="submit"]
+		border 0
+	.nav-icon
+		fill white
+
+.btn--disable
+	@extend .disabled
+	border 1px solid $border-color
+	background-color #ffffff
+	color #000000
+
+.btn--light
+	@extend .btn
+	border 1px solid $border-color
+	background-color #ffffff
+	&:hover
+		border 1px solid $mark
+	.nav-icon
+		fill $mark
+
+
+
+.btn--icon
+	flex(mid)
+
+.nav-icon
+	size 20px
+	display inline-block
+
+.nav-icon--left
+	margin-left 10px
+
+.nav-icon--right
+	margin-rihgt 10px
+
+
