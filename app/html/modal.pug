@@ -14,14 +14,20 @@ style(type='text/css').
 		align-items: baseline;
 	}
 
+.page
+	+header("black")
+	.content
+		.main-cont
+			p Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"
+			p Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send
+			.btn-wrap
+				.btn--md.btn--mark.modal-get(data-modal="warranty") Гарантия | data-modal="warranty"
+				.btn--md.btn--mark.modal-get(data-modal="contact") Контакты | data-modal="contact"
+				.btn--md.btn--mark.modal-get(data-modal="truemessage") Успешное действие | data-modal="truemessage"
+				.btn--md.btn--mark.modal-get(data-modal="profile-edit") Изменить профиль | data-modal="profile-edit"
+				.btn--md.btn--mark.modal-get(data-modal="adress-edit") Изменить адрес | data-modal="adress-edit"
+				.btn--md.btn--mark.modal-get(data-modal="login") Вход | data-modal="login"
 
-.main-cont
-	p Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"
-	p Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send
-	.btn-wrap
-		.btn--md.btn--mark.modal-get(data-modal="order") Заявка | data-modal="code "
-
-+footer()
-+modal()
+	+footer("black")
 
 include ./block_html/_script.pug

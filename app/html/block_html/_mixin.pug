@@ -1,3 +1,23 @@
+mixin head()
+  .header
+    .main-cont
+      .head
+        a(href="/").head-logo
+          img(src="img/logo.svg", alt="")
+        .head-nav
+          -
+            var items = [
+            "главная",
+            "cамолеты",
+            "запчасти",
+            "лазерная резка",
+            "доставка",
+            ];
+          each item,i in items
+            a(href="#" class=i === 1 ? 'head-nav__el--active' : '').head-nav__el #{item}
+          .modal-get.head-nav__el(data-modal="warranty") гарантия
+          .modal-get.head-nav__el(data-modal="contact") контакты
+
 mixin icon(name,cls)
   svg(class=cls)
     use(xlink:href="#" + name)
@@ -16,7 +36,7 @@ mixin checkbox(text,disable)
         .sytle-input-element
           +icon("checked","icon-check")
         .sytle-input-text=text
-mixin radio(text,group,disable)
+mixin radio(text,group,check,disable)
   .check-el
     if disable
       label.style-label.style-label--radio.style-label--disable
@@ -26,7 +46,7 @@ mixin radio(text,group,disable)
         .sytle-input-text=text
     else
       label.style-label.style-label--radio
-        input(type="radio" name="group").sytle-input
+        input(type="radio" name=group checked=check?'checked':false).sytle-input
         .sytle-input-element
           .icon-radio
         .sytle-input-text=text

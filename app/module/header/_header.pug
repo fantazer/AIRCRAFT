@@ -1,21 +1,27 @@
-mixin header()
+mixin header(type)
 	//block header
-	.header
-		.main-cont
-			.head
-				a(href="/").head-logo
-					img(src="img/logo.svg", alt="")
-				.head-nav
-					-
-						var items = [
-						"главная",
-						"cамолеты",
-						"запчасти",
-						"лазерная резка",
-						"доставка",
-						];
-					each item,i in items
-						a(href="#" class=i === 1 ? 'head-nav__el--active' : '').head-nav__el #{item}
-					.modal-get.head-nav__el(data-modal="warranty") гарантия
-					.modal-get.head-nav__el(data-modal="contact") контакты
+	if(type==='black')
+		.head-black
+			.head-top-wrap
+				.main-cont
+					.head-top
+						.lang-toggle
+							a(href="#").lang-toggle__el.lang-toggle__el--active RU
+							a(href="#").lang-toggle__el EN
+						.head-phone
+							+icon("phone-call","icon")
+							a(href="tel:8 (495) 225 54 66") 8 (495) 225 54 66
+						.auth
+							.auth-text Здравствуйте,
+							.auth-icon
+								+icon("user","icon")
+							.auth-enter войдите в аккаунт
+						a(href="#").cart
+							.cart-icon
+								+icon("cart","icon")
+								.cart-val 1
+			+head()
+	else
+		+head()
+
 	//block header end

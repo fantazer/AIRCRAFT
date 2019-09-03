@@ -77,6 +77,9 @@ body
 	.order__row
 		margin-bottom: 20px
 		border-bottom 0
+.modal--sm
+	max-width 320px
+
 .modal-content
 	+below(640px)
 		height: 100%
@@ -183,15 +186,15 @@ body
 	flex(mid)
 	fl()
 	br(10px)
-	.icon
-		fill green
+	.icon--success
 		size 120px
 		margin-bottom: 20px
 
 .modal-text-true
 	text-align: center
 	font-weight: bold
-
+	font-family "Roboto Slab"
+	@extend .type--lg
 //modal===end
 
 // select
@@ -377,19 +380,40 @@ select.select-beauty
 	flex(between)
 .head-nav__el
 	up()
-	color black
 	cp()
+	color black
+	position relative
+	&:before
+		content ''
+		tr()
+		position absolute
+		top 110%
+		left 0
+		width: 30px
+		height: 2px
+		background: black
+		opacity: 0
+		transform translateX(-15px)
+	&:hover
+		&:before
+			content ''
+			transform translateX(0)
+			opacity: 1
+			display block
+
 .head-nav__el--active
 	font-weight: 700
 	position relative
 	&:before
 		content ''
 		position absolute
-		top 100%
+		opacity: 1!important
+		top 110%
 		left 0
-		width: 20px
+		width: 30px
 		height: 2px
 		background: black
+		transform translateX(0)
 
 
 .video-bg
@@ -427,6 +451,15 @@ select.select-beauty
 	margin-right auto
 .soc-row
 	f()
+.soc-row--yellow
+	.soc-row
+		margin-top: 30px
+	.soc-row__el
+		border-color $yellow
+		.icon
+			fill $yellow
+.soc-row--mid
+	flex(mid)
 .footer-soc
 	height: 100px
 	f()
@@ -439,7 +472,11 @@ select.select-beauty
 		.icon
 			fill $yellow
 .soc-row__el
-
+	&:hover
+		background: black
+		border 1px solid black
+		.icon
+			fill $yellow
 	round()
 	flex(mid)
 	tr(all)
@@ -494,6 +531,8 @@ select.select-beauty
 	@extend .type--xl
 	margin-bottom: 30px
 	text-shadow 0 1px 0 rgba(255, 255, 255, 0.5)
+.section-title--left
+	text-align: left
 .section-title-sub
 	text-align center
 	@extend .type--md
@@ -521,6 +560,7 @@ select.select-beauty
 
 //Навигация снаружи
 .slider-wrap--simple
+	padding: 0 20px
 	.slider-control
 		round()
 		flex(mid)
@@ -532,15 +572,14 @@ select.select-beauty
 		z-index 10
 		cp()
 		&:hover
-			background: $red
 			.icon
-				fill white
+				fill $yellow
 		.icon
-			size 35px
+			size 25px
 	.slider-control--left
-		left -50px
+		left -20px
 	.slider-control--right
-		right -50px
+		right -20px
 //Навигация снаружи end
 
 //Навигация внутри
@@ -595,12 +634,9 @@ select.select-beauty
 //=== Внешний вид пагинации end===
 
 .slick-slide
-	margin: 0 20px
+	margin: 0 10px
 .slick-list
-	margin: 0 -20px
-
-.slider-item
-	padding-bottom: 70px
+	margin: 0 -10px
 
 .item-img
 	bg-full()
@@ -710,3 +746,767 @@ thead
 	text-shadow 0 1px 0 rgba(255, 255, 255, 0.5)
 	color #000000
 	font-family "Roboto Slab"
+
+
+// modals
+.login-drop-wrap
+	position: absolute
+	right: 0
+	background: white
+	z-index 15
+	top 100%
+	border-radius 10px
+.login-drop
+	border-radius 10px
+	display: none
+	position: relative
+	top 100%
+	padding: 20px
+	border 1px solid $border-color
+	width: 250px
+	&:before
+		content ''
+		position: absolute
+		size 16px
+		border-left 1px solid $border-color
+		border-top 1px solid $border-color
+		transform rotate(45deg)
+		top - 8px
+		left 50%
+		margin-left: -8px
+		background: white
+		+below(1200px)
+			left initial
+			right 2px
+.login-drop--active
+	opacity:1
+
+.login
+	position: relative
+	padding-bottom: 10px
+	margin-bottom: -10px
+//.login-enter
+.login-enter--active
+	color $yellow
+	border-bottom 0
+.login-drop__head
+	f()
+	margin-bottom: 20px
+.login-toggle
+	//border-bottom 1px dashed $border-color
+	cp()
+	font-family "Roboto Slab"
+	@extend .type--lg
+	opacity: .6
+	font-weight: 700
+	&:nth-child(1)
+		padding-right: 10px
+		margin-right: 10px
+		border-right 1px solid $border-color
+
+.login-toggle--active
+	opacity:1
+	border-bottom 0
+.login-wrap
+	.input
+		margin-bottom: 20px
+	input
+		width: 100%
+	opacity:0
+	left -9999px
+	height: 0
+	overflow: hidden
+.login-wrap--active
+	opacity:1
+	left 0
+	height: auto
+	transition opacity .6s
+.login-form
+	margin-bottom: 20px
+	.btn--md
+		margin-bottom: 0
+.login-remember
+	margin-bottom: 20px
+
+.login-fogot
+	color $yellow
+	text-decoration: underline
+	link()
+	display inline-block
+	cp()
+.login-soc
+	margin-top: 20px
+	padding-top: 20px
+	border-top 1px solid $border-color
+
+.login-soc__text
+	opacity:.6
+	margin-bottom: 20px
+.login-soc-row
+	f()
+.login-soc-el
+	.icon
+		size 25px
+	&:nth-child(1)
+		margin-right: 10px
+
+.visible
+	opacity: 1
+	transform translateY(0)
+	top 0
+
+.login-btn-code
+	@extend .btn--mark
+	@extend .btn--md
+	width: 100%
+
+.login-btn-recode
+	@extend .btn--md
+	@extend .btn--light
+	width: 100%
+	margin: 20px 0
+
+.login-btn-back
+	@extend .btn--light
+	@extend .btn--md
+	width: 100%
+	padding: 12px
+
+.login-code-text
+	font-size: 11px
+	margin-bottom: 20px
+	line-height: 1.4
+// modals === end
+
+.head-black
+	.head
+		margin-top: -40px
+		padding 0
+.head-top-wrap
+	background: #000000
+	padding: 10px 0
+	color white
+
+	position relative
+.head-top
+	f()
+	align-items center
+.lang-toggle
+	flex(mid)
+	margin-left: 150px
+	z-index 10
+.lang-toggle__el
+	color white
+	margin-right: 10px
+	display inline-block
+	text-decoration: underline
+	font-weight: 300
+	up()
+	tr()
+	&:hover
+		color: $yellow
+.lang-toggle__el--active
+	text-decoration: none
+	font-weight: 700
+.head-phone
+	flex(mid)
+	margin-left auto
+	margin-right: 20px
+	z-index 10
+	a
+		color white
+	.icon
+		margin-right: 10px
+		size 20px
+		fill $yellow
+.auth
+	f()
+	cp()
+	z-index 10
+	align-items center
+	color white
+	margin-right: 20px
+.auth-text
+	margin-right: 10px
+.auth-icon
+	margin-right: 10px
+	.icon
+		size 20px
+		fill $yellow
+.auth-enter
+	up()
+	text-decoration: underline
+	cp()
+	tr()
+	&:hover
+		color $yellow
+
+.cart
+	flex(mid)
+	z-index 10
+.cart-icon
+	.icon
+		size 20px
+		fill $yellow
+.cart-val
+	position absolute
+	size 14px
+	flex(mid)
+	round()
+	text-align center
+	color white
+	font-size: 10px
+	background: red
+	top -3px
+	right: 0
+
+.footer-black-wrap
+	background: black
+	padding: 50px 0
+	margin-top: 70px
+//.main-cont
+.footer-black
+	f()
+	justify-content space-between
+.footer-black-info
+	width: 30%
+	margin-top: -80px
+.footer-copyright
+	color white
+	text-align center
+	margin-top: 60px
+.footer-nav
+	width: 30%
+.footer-title
+	color white
+	font-family "Roboto Slab"
+	@extend .type--lgx
+	margin-bottom: 30px
+.footer-menu
+	column-count 2
+.footer-menu__el
+	up()
+	color white
+	display block
+	margin-bottom: 20px
+.footer-contact
+	width: 30%
+.footer-contact__el
+	f()
+	align-items center
+	margin-bottom: 20px
+	@extend .type--md
+	up()
+	a
+		color white
+	.icon
+		size 20px
+		fill $yellow
+		margin-right: 20px
+
+.header--yellow
+	.header
+		background: $yellow
+
+.gallery-main-slider__el
+	padding: 30% 10%
+	bg-full()
+
+.gallery-nav-slider__el
+	padding: 40% 10%
+	bg-full()
+	cp()
+.gallery-nav-slider
+
+	.slick-current
+		tr()
+		background-color: black
+		position relative
+		&:before
+			content ''
+			width: 100%
+			height: 2px
+			position absolute
+			left 0
+			bottom 0px
+			background: black
+	.slick-track
+		margin-left: 0px
+	.slick-list
+		margin: 0 -10px
+.gallery-main-slider
+	+below(640px)
+		display none
+	margin-bottom 20px
+
+.product
+	f()
+	justify-content space-between
+
+.gallery-img
+	width: 55%
+
+.product-wrap
+	padding: 80px 0
+	background: $yellow
+	margin-bottom: 50px
+
+.product-info
+	width: 40%
+.product-title
+	font-family "Roboto Slab"
+	@extend .type--xxl
+	margin-bottom: 20px
+
+.product-descr
+	margin-bottom: 20px
+
+.product-cost
+	flex(between)
+.product-cost-info
+	f()
+	align-items flex-end
+	font-family "Roboto Slab"
+	margin-right: 30px
+.product-cost__val
+	line-height: 1
+	@extend .type--xl
+	font-weight 400
+	margin-right: 10px
+.product-cost__type
+	@extend .type--mdx
+
+.product-get
+	@extend .btn--md
+	@extend .btn--white
+	min-width 150px
+
+//.product-tab
+.product-tab-head
+	f()
+	border-bottom 1px solid $border-color
+.product-tab-head__el
+	padding: 30px
+	font-family "Roboto Slab"
+	@extend .type--lg
+	font-weight 300
+	width: 25%
+	margin-bottom: -1px
+	text-align center
+	cp()
+	border-bottom 2px solid transparent
+	tr()
+	&:hover
+		border-bottom 2px solid $yellow
+.product-tab-head__el--active
+	border-bottom 2px solid $yellow
+	font-weight: 700
+//.product-tab-cont
+.product-tab-cont__el
+	display none
+	padding: 50px 0
+.product-tab-cont__el--active
+	display block
+
+.book-row
+	f()
+	fw()
+	align-items: flex-end
+	margin-bottom: 20px
+.book-row__title
+	max-width: 80%
+	line-height: 1.6
+	font-weight: 700
+.book-row__dot
+	border-bottom 1px dashed #00000017
+	flex-grow 1
+.book-row__value
+	max-width: 50%
+	white-space nowrap
+	vertical-align: bottom
+	opacity: .8
+.product-char--multy
+	column-count 2
+	column-gap 60px
+	column-fill: auto
+
+.product-char-wrap
+	f()
+	justify-content space-between
+	align-items:flex-start
+
+	.product-char
+		width: 50%
+.product-note
+	width: 300px
+	padding: 30px
+	background: $yellow
+.product-note__title
+	font-size: 22px
+	font-weight: 700
+	margin-bottom: 10px
+.product-note__text
+	line-height: 1.6
+	margin-bottom: 20px
+.product-note__get
+	width: 70%
+	text-decoration: underline
+	font-weight: 700
+	display inline-block
+	line-height: 1.6
+
+// BASKET
+.basket-wrap
+	+below(768px)
+		fw()
+		margin-bottom: 30px
+	f()
+	justify-content: space-between
+	align-items: flex-start
+	margin-bottom: 100px
+
+.modal
+	.basket-wrap
+		margin-bottom: 0
+.basket-list
+	+below(768px)
+		width: 100%
+	+below(640px)
+		padding: 0
+	width: 75%
+	background: white
+	border 1px solid $border-color
+.basket-el
+	+below(640px)
+		fw()
+		position: relative
+		padding-bottom: 40px
+	margin: 10px 0
+	padding: 10px 30px
+	border-bottom 1px solid $border-color
+	flex(between)
+	&:nth-last-child(2)
+		border-bottom 0
+.basket-el__img
+	+below(640px)
+		size(70px)
+	br(10px)
+	bg-full()
+	background-size contain
+	margin-right: 30px
+	align-self flex-start
+	padding: 7% 10%
+.basket-el__info
+	+below(640px)
+		width calc(100% - 90px)
+		margin-bottom: 20px
+	width: 50%
+.basket-el__title
+	+below(640px)
+		max-width calc(100% - 25px)
+	@extend .type--md
+	font-weight 700
+	margin-bottom: 15px
+	display: inline-block
+	span
+		link()
+.ingr-list
+	f()
+	align-items: center
+	fw()
+
+.basket-el__incr
+	+below(768px)
+		margin-left: 20px
+	+below(640px)
+		margin-left: 90px
+	width: 120px
+//.elements-icr-block
+.basket-el__price
+	+below(640px)
+		font-size: 18px
+		width: auto
+	width: 15%
+	text-align: center
+	@extend .type--lg
+	font-weight 700
+.basket-el__remove
+	+below(640px)
+		top 0
+		right 0
+		position: absolute
+	.icon
+		+below(640px)
+			size 18px
+		size 25px
+		fill #c2c2c2
+		tr(all)
+		cp()
+		&:hover
+			fill $yellow
+.basket-info
+	+below(1024px)
+		width: 30%
+	+below(768px)
+		width: 100%
+		border 1px solid $border-color
+		padding: 25px
+		br(20px)
+		margin-left: auto
+		margin-right: auto
+		max-width 480px
+	width: 25%
+	padding:0 0 40px 25px
+	margin-left: 25px
+	//border-left 1px solid $border-color
+
+//.basket-info
+
+//increment
+.incr
+	+below(640px)
+		width: 100%
+	f()
+	justify-content: space-between
+	position relative
+	width 100px
+	border-top 1px solid $border-color
+	border-bottom 1px solid $border-color
+	border-radius 38px
+	user-select none
+	background: white
+.incr__nav
+	flex(mid)
+	tr(background )
+	round()
+	size 34px
+	border 1px solid $border-color
+	background white
+	.icon
+		size 12px
+		fill #b3b3b3
+		opacity:1
+	&:hover
+		cp()
+		background-color $yellow
+		border 0
+		.icon
+			fill white
+	&:active
+		background-color $yellow
+.incr__val
+	flex(mid)
+	background white
+	position relative
+	tr(all)
+	color black
+	font-weight 700
+
+.item__incr
+	+below(640px)
+		width: 100%
+	width: 100px
+//increment===end
+
+.basket-cost
+	flex(mid)
+	fl()
+.basket-title
+	color #aaadb2
+	@extend .type--lg
+	font-weight 500
+	margin-bottom: 15px
+.basket-price
+	+below(768px)
+		font-size: 28px
+	color #1b2230
+	@extend .type--xl
+	font-weight 700
+	margin-bottom: 15px
+.basket-sale
+	@extend .type--lg
+	font-weight 500
+	f()
+	margin-bottom: 30px
+.basket-sale__text
+	color #aaadb2
+	margin-right: 5px
+.basket-sale__val
+	color $yellow
+
+.basket-promo
+	flex(mid)
+.basket-promo__input
+	width: 80%
+	position: relative
+	margin-bottom: 30px
+	.input
+		@extend .type--lg
+		font-weight 700
+		color black
+		width: 100%
+		padding-right: 35px
+		text-align: center
+		&:focus
+			border-color black
+	.icon
+		size 20px
+		position: absolute
+		top calc(50% - 10px)
+		right: 15px
+		display: none
+.basket-promo__input--true
+	.icon-true
+		display: block
+		fill #06a318
+.basket-promo__input--false
+	.icon-false
+		top calc(50% - 7px)
+		display: block
+		fill $yellow
+		size 14px
+.basket-descr
+	margin-bottom: 15px
+.basket-enter
+	margin-bottom: 15px
+	line-height: 1.6
+.basket-auth
+	link($yellow)
+	cp()
+	margin-right: 5px
+.basket-code
+	margin-bottom: 40px
+	.input
+		width: 100%
+.basket-deliver
+	+below(768px)
+		text-align: center
+		display: block
+	display: inline-block
+	span
+		link($yellow)
+.basket-get
+	@extend .btn--md
+	@extend .btn--mark
+	width: 100%
+	margin-top: 30px
+
+.basket-empty
+	width: 100%
+	flex(mid)
+	fl()
+	margin-bottom: 30px
+	padding: 40px 0
+.basket-empty--hidden
+	display: none
+.basket-empty__icon
+	.icon
+		size 80px
+		margin-bottom: 20px
+.basket-empty__title
+	@extend .type--lg
+	font-weight 700
+	color black
+	margin-bottom: 10px
+.basket-empty__text
+	margin-bottom: 30px
+.basket-empty__get
+	@extend .btn--md
+	@extend .btn--mark
+
+// BASKET === end
+
+.content--extend
+	padding-top: 50px
+
+// ORDER
+.order-tab
+	f()
+	border 1px solid $yellow
+	margin-bottom: 30px
+	border-radius 10px
+	overflow: hidden
+.order-tab__el
+	padding: 15px 20px
+	width: 50%
+	text-align: center
+	color $yellow
+	cp()
+.order-tab__el--active
+	background: $yellow
+	color white
+
+.order
+	+below(1024px)
+		width: 100%
+	+below(768px)
+		margin-bottom: 30px
+	+below(640px)
+		width: 100%
+	width: 100%
+
+.order-time
+	+below(480px)
+		fl()
+		flex(mid)
+	f()
+	align-items: center
+	margin-bottom: 20px
+	.nice-select
+		+below(768px)
+			width: 100%
+		margin-bottom: 0
+		width: 60%
+.order-time__title
+	+below(480px)
+		width: 100%
+		text-align: center
+		margin-bottom: 20px
+	@extend .type--md
+	margin-right: 20px
+.radio-list
+	.check-el
+		margin-bottom: 20px
+
+.basket-cont
+	+below(1024px)
+		width: calc(100% - 340px)
+	width: 45%
+	+below(768px)
+		width: 100%
+
+.input-row--adress
+	+below(640px)
+		fw()
+	flex(between)
+	.input
+		+below(640px)
+			width: 48%
+		width: 23%
+.order-title
+	@extend .type--lg
+	font-weight: 700
+	margin-bottom: 20px
+.payment__type__el
+	margin-bottom: 20px
+.panel
+	width: 40%
+	.basket-list
+		width: 100%
+	.basket-el
+		padding: 20px 10px
+		fw()
+		position relative
+	.basket-el__info
+		width calc(100% - 140px)
+	.basket-el__img
+		size 70px
+	.basket-el__remove
+		position absolute
+		top 5px
+		right: 10px
+		.icon
+			size 20px
+.basket-el__cost
+	flex(between)
+// ORDER === end

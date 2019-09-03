@@ -27,9 +27,121 @@ mixin modal()
 							.modal-contact__type E-mail:
 							a(href="mailto:info@vlasov-rc.com").modal-contact__val info@vlasov-rc.com
 			//success message
-			.modal(data-modal="truemessage")
+			.modal.modal--sm(data-modal="truemessage")
 				.modal-content.modal-content--true
-					+icon("interface","icon")
+					.modal-close
+						+icon("close-fat","icon")
+					+icon("success--color","icon icon--success")
 					.modal-text-true Ваша заявка принята
 
+			//modal profile-edit
+			.modal(data-modal="profile-edit")
+				.modal-content
+					.modal-close
+						+icon("close-fat","icon")
+					.modal-title Изменить профиль
+					form( action="#")
+						.input-row
+							.input-row__title Имя
+							input(type="text" name="name"  value="Александр").input
+						.input-row
+							.input-row__title Телефон:
+							input(type="text" name="name"  value="+7 923 666 7667").input
+						.input-row
+							.input-row__title День рождения:
+							input(type="text" name="name"  value="30.20.1982").input
+						input(type="submit" value="Cохранить").modal-send
+			//modal profile-edit === end
+
+			//modal adres-edit
+			.modal(data-modal="adress-edit")
+				.modal-content
+					.modal-close
+						+icon("close-fat","icon")
+					.modal-title Изменить адрес
+					form( action="#")
+						.select-city
+						.input-row
+							.input-row__title Улица
+							input(type="text" name="name"  value="Ленина").input
+						.input-row-half
+							.input-wrap
+								.input-row__title Улица
+								input(type="text" name="name"  value="14").input
+							.input-wrap
+								.input-row__title Квартира
+								input(type="text" name="name"  value="35").input
+						.input-row-half
+							.input-wrap
+								.input-row__title Подъезд
+								input(type="text" name="name"  value="2").input
+							.input-wrap
+								.input-row__title Этаж
+								input(type="text" name="name"  value="17").input
+						.input-row
+							.input-row__title Подпись (например: работа)
+							input(type="text" name="name" placeholder="Подпись (например: работа)" value="Дом").input
+						input(type="submit" value="Cохранить").modal-send
+			//modal adres-edit === end
+
+
+			//login
+			.modal.modal--md(data-modal="login")
+				.modal-content
+					.modal-close
+						+icon("close-fat","icon")
+					.login-drop__head
+						.login-toggle.login-switch.login-toggle--active(data-switch='enter') Вход
+						.login-toggle.login-switch(data-switch='registration') Регистрация
+					//enter form
+					.login-wrap.login-wrap--active(data-cont='enter')
+						form(action="#").login-form
+							input(type="text" placeholder="Электр. почта/Телефон" class="input")
+							input(type="text" placeholder="Пароль" class="input")
+							input(type="submit" value="Войти" class="btn--md btn--mark")
+						.login-remember
+							+checkbox('Запомнить меня')
+						.login-fogot.login-switch(data-switch='fogot') Забыли пароль?
+						.login-soc
+							.login-soc__text Войти с помощью соц. сетей
+							.soc-row
+								a(href="#").soc-row__el
+									+icon("soc-instagram","icon")
+								a(href="#").soc-row__el
+									+icon("soc-vk","icon")
+								a(href="#").soc-row__el
+									+icon("soc-facebook","icon")
+					//registration form
+					.login-wrap.login-wrap--registration(data-cont='registration')
+						form(action="#").login-form
+							input(type="text" placeholder="Имя" class="input")
+							input(type="text" placeholder="Телефон" class="input")
+							input(type="text" placeholder="E-mail" class="input")
+							input(type="password" placeholder="Пароль" class="input")
+							input(type="password" placeholder="Повторить пароль" class="input")
+							.login-remember
+								+checkbox('Соглашаюсь с условиями обработки персональных данных')
+							input(type="submit" value="Войти" class="btn--md btn--mark")
+						.login-soc
+							.login-soc__text Зарегистрироваться с помощью соц. сетей
+							.login-soc-row
+								a(href="#").login-soc-el
+									+icon("vk--color","icon")
+								a(href="#").login-soc-el
+									+icon("facebook--color","icon")
+					//registration form
+					.login-wrap.login-wrap--registration(data-cont='fogot')
+						.modal-text.text
+							p Укажите имя пользователя или адрес вашей электронной почты и мы вышлем вам на почту ссылку на создание нового пароля
+						form(action="#").login-form
+							input(type="text" placeholder="E-mail или Имя пользователя" class="input")
+							.login-btn-code.login-switch(data-switch='code') Отправить код
+					.login-wrap.login-wrap--registration(data-cont='code')
+						.login-code-text Вам на e-mail/телефон отправлен код подтверждения
+						form(action="#").login-form
+							input(type="text" placeholder="Введите код" class="input")
+							.login-btn-code Подтвердить
+							.login-btn-recode Выслать повторно
+							.login-btn-back.login-switch(data-switch='fogot') Назад к восстановлению
+			//cart === end
 

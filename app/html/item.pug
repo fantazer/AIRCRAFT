@@ -1,0 +1,117 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	.header--yellow
+		+header("black")
+	.content
+		.product-wrap
+			.main-cont
+				.product
+					.gallery-img
+						.gallery-main-slider
+							- for (var i=0;i<3;i++)
+								.gallery-main-slider__el(style="background-image:url('img/aircraft-1.jpg')")
+								.gallery-main-slider__el(style="background-image:url('img/aircraft-2.jpg')")
+								.gallery-main-slider__el(style="background-image:url('img/aircraft-3.jpg')")
+								.gallery-main-slider__el(style="background-image:url('img/aircraft-4.jpg')")
+								.gallery-main-slider__el(style="background-image:url('img/aircraft-5.jpg')")
+						.slider-wrap.slider-wrap--simple
+							.slider-control.slider-control--left
+								+icon("arrow-left--height","icon")
+							.slider-control.slider-control--right
+								+icon("arrow-right--height","icon")
+							.gallery-nav-slider.slider-item
+								- for (var i=0;i<3;i++)
+									.gallery-nav-slider__el(style="background-image:url('img/aircraft-1.jpg')")
+									.gallery-nav-slider__el(style="background-image:url('img/aircraft-2.jpg')")
+									.gallery-nav-slider__el(style="background-image:url('img/aircraft-3.jpg')")
+									.gallery-nav-slider__el(style="background-image:url('img/aircraft-4.jpg')")
+									.gallery-nav-slider__el(style="background-image:url('img/aircraft-5.jpg')")
+					.product-info
+						.product-title 3D Stick размах 2.1 м.
+						.product-descr.text
+							p 3D Stick – современная инкарнация знаменитого Das Ugly Stick, одного из самых массовых самолетов в истории модельной авиации, разработанного Филом Крафтом в 1966-м году.
+
+							p Наш Stick 3D– это самолет, способный на многое! Большие управляющие поверхности, симметричный профиль крыла, усиленная конструкция. Это настоящий акробат. При этом, самолет оснащен закрылками(в полетном режиме они работают, как дополнительные элероны) и способен летать очень медленно, что делает его поистине универсальным.
+							p Ну и конечно же, мы сделали все, чтобы сборка модели доставила вам максимум удовольствия! Например, бальзовая обшивка уже порезана лазером, что сэкономит кучу времени и позволит быстрее поднять модель в воздух.
+							p От винта!
+						.product-cost
+							.product-cost-info
+								.product-cost__val 15 000
+								.product-cost__type руб
+							.product-get купить
+
+		.main-cont
+			.product-tab
+				.product-tab-head
+					.product-tab-head__el.product-tab-head__el--active Характеристики
+					.product-tab-head__el Что в комплекте?
+					.product-tab-head__el Что еще нужно?
+				.product-tab-cont
+					.product-tab-cont__el.product-tab-cont__el--active
+						.product-char.product-char--multy
+							- for (var i=0;i<3;i++)
+								.book-row
+									.book-row__title Размах крыла
+									.book-row__dot
+									.book-row__value 2100 мм
+								.book-row
+									.book-row__title Вес (приблизительно)
+									.book-row__dot
+									.book-row__value 5.5 кг
+								.book-row
+									.book-row__title Крыло
+									.book-row__dot
+									.book-row__value разъёмное, на трубе
+								.book-row
+									.book-row__title Стабилизатор
+									.book-row__dot
+									.book-row__value профилированный, съёмный
+					.product-tab-cont__el
+						.product-char.product-char--multy
+							- for (var i=0;i<6;i++)
+								.book-row
+									.book-row__title Размах крыла
+									.book-row__dot
+									.book-row__value 2100 мм
+								.book-row
+									.book-row__title Вес (приблизительно)
+									.book-row__dot
+									.book-row__value 5.5 кг
+								.book-row
+									.book-row__title Крыло
+									.book-row__dot
+									.book-row__value разъёмное, на трубе
+								.book-row
+									.book-row__title Стабилизатор
+									.book-row__dot
+									.book-row__value профилированный, съёмный
+					.product-tab-cont__el
+						.product-char-wrap
+							.product-char
+								- for (var i=0;i<3;i++)
+									.book-row
+										.book-row__title Размах крыла
+										.book-row__dot
+										.book-row__value 2100 мм
+									.book-row
+										.book-row__title Вес (приблизительно)
+										.book-row__dot
+										.book-row__value 5.5 кг
+									.book-row
+										.book-row__title Крыло
+										.book-row__dot
+										.book-row__value разъёмное, на трубе
+									.book-row
+										.book-row__title Стабилизатор
+										.book-row__dot
+										.book-row__value профилированный, съёмный
+							.product-note
+								.product-note__title Внимание!
+								.product-note__text Для установки двигателя может потребоваться отдельный инструмент – уточните в инструкции по эксплуатации.
+								a(href="#").product-note__get Скачать инструкцию в формате PDF
+
+	+footer("black")
+
+include ./block_html/_script.pug

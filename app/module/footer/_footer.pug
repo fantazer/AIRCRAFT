@@ -1,15 +1,54 @@
-mixin footer()
+mixin footer(type)
 	//block footer
-	.footer
-		.footer-spin(style="background-image:url('img/spin.png')")
+	if(type==="spin")
+		.footer
+			.footer-spin(style="background-image:url('img/spin.png')")
+				.main-cont
+					.footer-soc
+						.soc-row
+							a(href="#").soc-row__el
+								+icon("soc-instagram","icon")
+							a(href="#").soc-row__el
+								+icon("soc-vk","icon")
+							a(href="#").soc-row__el
+								+icon("soc-facebook","icon")
+	if(type==="black")
+		.footer-black-wrap
 			.main-cont
-				.footer-soc
-					.soc-row
-						a(href="#").soc-row__el
-							+icon("soc-instagram","icon")
-						a(href="#").soc-row__el
-							+icon("soc-vk","icon")
-						a(href="#").soc-row__el
-							+icon("soc-facebook","icon")
-	//block footer end
+				.footer-black
+					.footer-black-info
+						.footer-logo
+							img(src="img/logo.svg", alt="")
+						.soc-row.soc-row--yellow.soc-row--mid
+							a(href="#").soc-row__el
+								+icon("soc-instagram","icon")
+							a(href="#").soc-row__el
+								+icon("soc-vk","icon")
+							a(href="#").soc-row__el
+								+icon("soc-facebook","icon")
+						.footer-copyright © Vlasov.ru, 2016-2019
+					.footer-nav
+						.footer-title Меню
+						.footer-menu
+							-
+								var items = [
+									'главная ',
+									'самолеты',
+									'запчати',
+									'лазерная резка',
+									'доставка',
+									'гарантия',
+									'контакты'
+									];
+							each item in items
+								a(href="#").footer-menu__el #{item}
+					.footer-contact
+						.footer-title Контакты
+						.footer-contact__el
+							+icon("phone-call","icon")
+							a(href="tel:8 (495) 225 54 66") 8 (495) 225 54 66
+						.footer-contact__el
+							+icon("mail","icon")
+							a(href="mailto:info@vlasov-rc.com") info@vlasov-rc.com
 	+modal()
+	//block footer end

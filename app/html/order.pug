@@ -1,0 +1,100 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	.header--yellow
+		+header("black")
+	.content.content--extend
+		.main-cont
+			.section-title.section-title--left Оформление заказа
+			.basket-wrap
+				.basket-cont
+					form(action="#")
+						.order
+							.input-row.input-row--person
+								input(type="text" placeholder="Ваше имя" class="input input-row--name")
+								input(type="text" placeholder="Телефон" class="input input-row--phone")
+							.order-tab
+								.order-tab__el.order-tab__el--active(data-tab="deliver") Доставка
+								.order-tab__el(data-tab="self") Самовывоз
+							.order-cont
+								.order-cont__el(data-tab="deliver")
+									.input-row
+										input(type="text" placeholder="Улица" class="input")
+									.input-row.input-row--adress
+										input(type="text" placeholder="Дом" class="input")
+										input(type="text" placeholder="Квартира" class="input")
+										input(type="text" placeholder="Подъезд" class="input")
+										input(type="text" placeholder="Этаж" class="input")
+								.order-cont__el.hidden(data-tab="self")
+									.radio-list
+										+radio("ул. А.Петрова 196а","adress","check")
+										+radio("Проспект Красноармейский, 94а.","adress")
+										+radio("Павловский тракт, 223а","adress")
+
+							.payment-wrap
+								.order-title Оплата
+								.payment__type-tab
+									.payment__type__el(data-tab="cash")
+										+radio("Наличными","payment","check")
+									.payment__type__el(data-tab="card")
+										+radio("Картой онлайн","payment")
+
+								.payment__type-cont.hidden
+									.payment__type-cont-el(data-tab="card")
+										.payment-card
+											- for (var i=0;i<3;i++)
+											.payment-card__el(class=i === 0 ? 'payment-card__el--active' : '')
+												.payment-card__el-icon
+													+icon("visa","icon")
+												.payment-card__el-val 7878 988* **** 3445
+											a(href="#").payment-card__other другой картой
+							.order-title Комментарий к заказу
+							.input-row
+								textarea(class="input" placeholder="Комментарий" name="textarea", cols="30", rows="10")
+				//panel
+				.panel
+					.basket-list
+						- for (var j=0;j<3;j++)
+							.basket-el
+								.basket-el__img(style="background-image:url('img/item.png')")
+								.basket-el__info
+									a(href="#").basket-el__title
+										span 3D Stick размах 2.1 м.
+									.basket-el__cost
+										.basket-el__price 1299р
+										.basket-el__incr
+											+incr()
+									.basket-el__remove
+										+icon("garbage","icon")
+							.basket-empty.basket-empty--hidden
+								.basket-empty__icon
+									+icon("cart","icon")
+								.basket-empty__title Ваша корзина пуста =(
+								.basket-empty__text Добавьте что-нибудь из меню
+								a(href="#").basket-empty__get Вернуться в меню
+
+					.basket-cost
+						.basket-title сумма заказа
+						.basket-price 1498р
+						.basket-sale
+							.basket-sale__text скидка
+							.basket-sale__val -100р
+					.basket-promo
+						//toggle class .basket-promo__input--true .basket-promo__input--false
+						.basket-promo__input
+							+icon("checked","icon icon-true")
+							+icon("close","icon icon-false")
+					.check-el.check-el--agree
+						label.style-label.style-label--checkbox
+							input(type="checkbox" name="agree").sytle-input
+							.sytle-input-element
+								+icon("check","icon icon-check")
+							.sytle-input-text Согласен с условиями <br> обработки персональных данных
+					.panel-footer
+						a(href="#").panel-get.btn--disable Заказать
+						a(href="#").panel-back Вернуться в меню
+
+	+footer("black")
+
+include ./block_html/_script.pug

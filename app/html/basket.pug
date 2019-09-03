@@ -1,0 +1,57 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	.header--yellow
+		+header("black")
+	.content.content--extend
+		.main-cont
+			.section-title.section-title--left Корзина
+			.basket-wrap
+				.basket-list
+					- for (var j=0;j<8;j++)
+						.basket-el
+							.basket-el__img(style="background-image:url('img/item.png')")
+							.basket-el__info
+								a(href="#").basket-el__title
+									span 3D Stick размах 2.1 м.
+							.basket-el__incr
+								+incr()
+							.basket-el__price 1299р
+							.basket-el__remove
+								+icon("garbage","icon")
+					.basket-empty.basket-empty--hidden
+						.basket-empty__icon
+							+icon("cart","icon")
+						.basket-empty__title Ваша корзина пуста =(
+						.basket-empty__text Добавьте что-нибудь из меню
+						a(href="#").basket-empty__get Вернуться в меню
+
+				.basket-info
+					.basket-cost
+						.basket-title сумма заказа
+						.basket-price 1498р
+						.basket-sale
+							.basket-sale__text скидка
+							.basket-sale__val -100р
+					.basket-promo
+						//toggle class .basket-promo__input--true .basket-promo__input--false
+						.basket-promo__input
+							+icon("checked","icon icon-true")
+							+icon("close","icon icon-false")
+							form(action="#")
+								input(type="text" placeholder="промокод" class="input")
+					.basket-descr Вячеслав, на вашем счету 250 бонусных баллов, которые вы можете потратить на заказ
+					.basket-enter
+						span.basket-auth Войдите или зарегистрируйтесь
+						| чтобы иметь возможность получить кешбек от заказа в виде балов.
+					.basket-code
+						form(action="#")
+							input(type="text" placeholder="Сколько баллов тратим?" class="input")
+					a(href="#").basket-deliver
+						span Условия доставки и оплаты
+					.basket-get оформить заказ
+
+	+footer("black")
+
+include ./block_html/_script.pug
