@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+<!--create by ANATOLY KUZNETSOV-->
+<!--contact mail:kuznecovs45@gmail.com skype:an_kuznetcov-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--colors-tabs-->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <!--SEO-->
+    <title>Document</title>
+    <meta name="description" itemprop="description" content="" />
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-edit.css" />
+</head>
+
+<body>
+    <div class="page">
+        <!--block header-->
+        <div class="head-black">
+            <div class="head-top-wrap">
+                <div class="main-cont">
+                    <div class="head-top">
+                        <div class="lang-toggle">
+                            <a class="lang-toggle__el lang-toggle__el--active" href="#">RU</a>
+                            <a class="lang-toggle__el" href="#">EN</a>
+                        </div>
+                        <div class="head-phone">
+                            <svg class="icon">
+                                <use xlink:href="#phone-call"></use>
+                            </svg>
+                            <a href="tel:8 (495) 225 54 66">8 (495) 225 54 66</a>
+                        </div>
+                        <div class="auth">
+                            <div class="auth-text">Здравствуйте,</div>
+                            <div class="auth-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#user"></use>
+                                </svg>
+                            </div>
+                            <div class="auth-enter">войдите в аккаунт</div>
+                        </div>
+                        <a class="cart" href="#">
+                            <div class="cart-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#cart"></use>
+                                </svg>
+                                <div class="cart-val">1</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header">
+                <div class="main-cont">
+                    <div class="head">
+                        <a class="head-logo" href="/">
+                            <img src="img/logo.svg" alt="" />
+                        </a>
+                        <div class="head-nav">
+                            <a class="head-nav__el" href="#">главная</a>
+                            <a class="head-nav__el--active head-nav__el" href="#">cамолеты</a>
+                            <a class="head-nav__el" href="#">запчасти</a>
+                            <a class="head-nav__el" href="#">лазерная резка</a>
+                            <a class="head-nav__el" href="#">доставка</a>
+                            <div class="modal-get head-nav__el" data-modal="warranty">гарантия</div>
+                            <div class="modal-get head-nav__el" data-modal="contact">контакты</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block header end-->
+        <div class="content content--extend content--gray">
+            <div class="main-cont">
+                <div class="lk">
+                    <div class="lk-user">
+                        <div class="lk-user__wrap">
+                            <div class="lk-title">
+                                <div class="lk-title__text">мой профиль</div>
+                                <div class="user-config">
+                                    <div class="user-config__el user-config__el--edit modal-get" data-modal="profile-edit">
+                                        <svg class="icon">
+                                            <use xlink:href="#edit"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="user-config__el user-config__el--remove">
+                                        <svg class="icon">
+                                            <use xlink:href="#exit"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user">
+                                <div class="user-row">
+                                    <div class="user__name">Имя:</div>
+                                    <div class="user__val">
+                                        <div class="user__val-info">
+                                            <div class="user__val-text">Александр</div>
+                                            <!--.user__val-edit Изменить-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user-row">
+                                    <div class="user__name">Телефон:</div>
+                                    <div class="user__val">+7 923 666 7667</div>
+                                </div>
+                                <div class="user-row">
+                                    <div class="user__name">День рождения:</div>
+                                    <div class="user__val">30 Сентября</div>
+                                </div>
+                                <div class="user-row">
+                                    <div class="user__name">Email:</div>
+                                    <div class="user__val">info@mail.ru</div>
+                                </div>
+                                <div class="user-row">
+                                    <div class="user__name">Бонусные баллы</div>
+                                    <div class="user__val user__val--bonus">140 Б</div>
+                                </div>
+                            </div>
+                            <!--.lk-title-sub Привязанные карты-->
+                            <!--.user-card
+						a(href="#").user-card__el.user-card__el--active
+							.user-card-remove
+								+icon("close","icon")
+							.user-card-icon
+								+icon("visa","icon")
+							.user-card-numb 7878 988* **** 3445
+						- for (var i=0;i<2;i++)
+						.user-card__el.user-card__el--add
+							.user-card__add
+								+icon("plus","icon")
+							.user-card__add-text Привязать карту
+						
+						-->
+                            <div class="lk-title-sub">Адреса</div>
+                            <div class="lk-adr">
+                                <div class="lk-adr__el">
+                                    <div class="lk-adr-conf">
+                                        <div class="lk-adr-conf__el lk-adr-conf__el--edit modal-get" data-modal="adress-edit">
+                                            <svg class="icon">
+                                                <use xlink:href="#edit"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="lk-adr-conf__el lk-adr-conf__el--remove">
+                                            <svg class="icon">
+                                                <use xlink:href="#garbage"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="lk-adr-text">Дом</div>
+                                    <div class="lk-adr-adress">г.Барнаул, пр.Ленина 62-2</div>
+                                </div>
+                                <div class="lk-adr__el">
+                                    <div class="lk-adr-conf">
+                                        <div class="lk-adr-conf__el lk-adr-conf__el--edit modal-get" data-modal="adress-edit">
+                                            <svg class="icon">
+                                                <use xlink:href="#edit"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="lk-adr-conf__el lk-adr-conf__el--remove">
+                                            <svg class="icon">
+                                                <use xlink:href="#garbage"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="lk-adr-text">Работа</div>
+                                    <div class="lk-adr-adress">г.Москва, ул.Победы 62</div>
+                                </div>
+                                <div class="lk-adr__el lk-adr__el--add modal-get" data-modal="adress-add">
+                                    <div class="lk-adr__add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="lk-adr__add-text">Добавить адрес</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lk-order">
+                        <div class="lk-order__wrap">
+                            <div class="history-title">История заказов</div>
+                            <div class="history">
+                                <div class="history-card history-card--active">
+                                    <div class="history-card__wrap">
+                                        <div class="history-card__icon">
+                                            <svg class="icon">
+                                                <use xlink:href="#arrow-down"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="history-card__info">
+                                            <div class="history-card__date">28 Сентября, 2017</div>
+                                            <div class="history-card__numb">№ 43576</div>
+                                        </div>
+                                        <div class="history-card__price">
+                                            <div class="history-card__price_text">Сумма:</div>
+                                            <div class="history-card__price_val">1100 Р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info history-info--active">
+                                        <div class="history-info__head">
+                                            <!--.history-info__head-date 28 Апреля 2017-->
+                                            <div class="history-info__head-state">Доставлен
+                                                <!-- use .history-info__head-state--false .history-info__head-state--wait-->
+                                            </div>
+                                            <div class="history-info__head-numb">№ 43576</div>
+                                        </div>
+                                        <div class="history-info__list">
+                                            <div class="history-info__el">
+                                                <a class="history-info__el-img" href="#" style="background-image:url('img/item.png')"></a>
+                                                <div class="history-info__el-about">
+                                                    <div class="history-info__el-title">3D Stick размах 2.1 м.</div>
+                                                    <div class="history-info__el-text">доп информация</div>
+                                                </div>
+                                                <div class="history-info__el-count">x2</div>
+                                                <div class="history-info__el-price">680 Р</div>
+                                            </div>
+                                        </div>
+                                        <div class="history-info__list">
+                                            <div class="history-info__el">
+                                                <a class="history-info__el-img" href="#" style="background-image:url('img/item.png')"></a>
+                                                <div class="history-info__el-about">
+                                                    <div class="history-info__el-title">3D Stick размах 2.1 м.</div>
+                                                    <div class="history-info__el-text">доп информация</div>
+                                                </div>
+                                                <div class="history-info__el-count">x2</div>
+                                                <div class="history-info__el-price">680 Р</div>
+                                            </div>
+                                        </div>
+                                        <div class="history-info__list">
+                                            <div class="history-info__el">
+                                                <a class="history-info__el-img" href="#" style="background-image:url('img/item.png')"></a>
+                                                <div class="history-info__el-about">
+                                                    <div class="history-info__el-title">3D Stick размах 2.1 м.</div>
+                                                    <div class="history-info__el-text">доп информация</div>
+                                                </div>
+                                                <div class="history-info__el-count">x2</div>
+                                                <div class="history-info__el-price">680 Р</div>
+                                            </div>
+                                        </div>
+                                        <div class="history-info__list">
+                                            <div class="history-info__el">
+                                                <a class="history-info__el-img" href="#" style="background-image:url('img/item.png')"></a>
+                                                <div class="history-info__el-about">
+                                                    <div class="history-info__el-title">3D Stick размах 2.1 м.</div>
+                                                    <div class="history-info__el-text">доп информация</div>
+                                                </div>
+                                                <div class="history-info__el-count">x2</div>
+                                                <div class="history-info__el-price">680 Р</div>
+                                            </div>
+                                        </div>
+                                        <div class="history-info-footer">
+                                            <div class="history-info-get">
+                                                <svg class="icon">
+                                                    <use xlink:href="#repeat"></use>
+                                                </svg>
+                                                <span>Повторить заказ</span>
+                                            </div>
+                                            <div class="history-info-total">
+                                                <div class="history-info-total__text">Сумма:</div>
+                                                <div class="history-info-total__val">1 184 Р</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="history-card">
+                                    <div class="history-card__wrap">
+                                        <div class="history-card__icon">
+                                            <svg class="icon">
+                                                <use xlink:href="#arrow-down"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="history-card__info">
+                                            <div class="history-card__date">28 Сентября, 2017</div>
+                                            <div class="history-card__numb">№ 43576</div>
+                                        </div>
+                                        <div class="history-card__price">
+                                            <div class="history-card__price_text">Сумма:</div>
+                                            <div class="history-card__price_val">1100 Р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info">
+                                        <div class="history-info__head">
+                                            <!--.history-info__head-date 28 Апреля 2017-->
+                                            <div class="history-info__head-state">Доставлен
+                                                <!-- use .history-info__head-state--false .history-info__head-state--wait-->
+                                            </div>
+                                            <div class="history-info__head-numb">№ 43576</div>
+                                        </div>
+                                        <div class="history-info__list">
+                                            <div class="history-info__el">
+                                                <a class="history-info__el-img" href="#" style="background-image:url('img/item.png')"></a>
+                                                <div class="history-info__el-about">
+                                                    <div class="history-info__el-title">3D Stick размах 2.1 м.</div>
+                                                    <div class="history-info__el-text">доп информация</div>
+                                                </div>
+                                                <div class="history-info__el-count">x2</div>
+                                                <div class="history-info__el-price">680 Р</div>
+                                            </div>
+                                        </div>
+                                        <div class="history-info__list">
+                                            <div class="history-info__el">
+                                                <a class="history-info__el-img" href="#" style="background-image:url('img/item.png')"></a>
+                                                <div class="history-info__el-about">
+                                                    <div class="history-info__el-title">3D Stick размах 2.1 м.</div>
+                                                    <div class="history-info__el-text">доп информация</div>
+                                                </div>
+                                                <div class="history-info__el-count">x2</div>
+                                                <div class="history-info__el-price">680 Р</div>
+                                            </div>
+                                        </div>
+                                        <div class="history-info__list">
+                                            <div class="history-info__el">
+                                                <a class="history-info__el-img" href="#" style="background-image:url('img/item.png')"></a>
+                                                <div class="history-info__el-about">
+                                                    <div class="history-info__el-title">3D Stick размах 2.1 м.</div>
+                                                    <div class="history-info__el-text">доп информация</div>
+                                                </div>
+                                                <div class="history-info__el-count">x2</div>
+                                                <div class="history-info__el-price">680 Р</div>
+                                            </div>
+                                        </div>
+                                        <div class="history-info__list">
+                                            <div class="history-info__el">
+                                                <a class="history-info__el-img" href="#" style="background-image:url('img/item.png')"></a>
+                                                <div class="history-info__el-about">
+                                                    <div class="history-info__el-title">3D Stick размах 2.1 м.</div>
+                                                    <div class="history-info__el-text">доп информация</div>
+                                                </div>
+                                                <div class="history-info__el-count">x2</div>
+                                                <div class="history-info__el-price">680 Р</div>
+                                            </div>
+                                        </div>
+                                        <div class="history-info-footer">
+                                            <div class="history-info-get">
+                                                <svg class="icon">
+                                                    <use xlink:href="#repeat"></use>
+                                                </svg>
+                                                <span>Повторить заказ</span>
+                                            </div>
+                                            <div class="history-info-total">
+                                                <div class="history-info-total__text">Сумма:</div>
+                                                <div class="history-info-total__val">1 184 Р</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="history-card">
+                                    <div class="history-card__wrap">
+                                        <div class="history-card__icon">
+                                            <svg class="icon">
+                                                <use xlink:href="#arrow-down"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="history-card__info">
+                                            <div class="history-card__date">28 Сентября, 2017</div>
+                                            <div class="history-card__numb">№ 43576</div>
+                                        </div>
+                                        <div class="history-card__price">
+                                            <div class="history-card__price_text">Сумма:</div>
+                                            <div class="history-card__price_val">1100 Р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info">
+                                        <div class="history-info__head">
+                                            <!--.history-info__head-date 28 Апреля 2017-->
+                                            <div class="history-info__head-state">Доставлен
+                                                <!-- use .history-info__head-state--false .history-info__head-state--wait-->
+                                            </div>
+                                            <div class="history-info__head-numb">№ 43576</div>
+                                        </div>
+                                        <div class="history-info__list">
+                                            <div class="history-info__el">
+                                                <a class="history-info__el-img" href="#" style="background-image:url('img/item.png')"></a>
+                                                <div class="history-info__el-about">
+                                                    <div class="history-info__el-title">3D Stick размах 2.1 м.</div>
+                                                    <div class="history-info__el-text">доп информация</div>
+                                                </div>
+                                                <div class="history-info__el-count">x2</div>
+                                                <div class="history-info__el-price">680 Р</div>
+                                            </div>
+                                        </div>
+                                        <div class="history-info__list">
+                                            <div class="history-info__el">
+                                                <a class="history-info__el-img" href="#" style="background-image:url('img/item.png')"></a>
+                                                <div class="history-info__el-about">
+                                                    <div class="history-info__el-title">3D Stick размах 2.1 м.</div>
+                                                    <div class="history-info__el-text">доп информация</div>
+                                                </div>
+                                                <div class="history-info__el-count">x2</div>
+                                                <div class="history-info__el-price">680 Р</div>
+                                            </div>
+                                        </div>
+                                        <div class="history-info__list">
+                                            <div class="history-info__el">
+                                                <a class="history-info__el-img" href="#" style="background-image:url('img/item.png')"></a>
+                                                <div class="history-info__el-about">
+                                                    <div class="history-info__el-title">3D Stick размах 2.1 м.</div>
+                                                    <div class="history-info__el-text">доп информация</div>
+                                                </div>
+                                                <div class="history-info__el-count">x2</div>
+                                                <div class="history-info__el-price">680 Р</div>
+                                            </div>
+                                        </div>
+                                        <div class="history-info__list">
+                                            <div class="history-info__el">
+                                                <a class="history-info__el-img" href="#" style="background-image:url('img/item.png')"></a>
+                                                <div class="history-info__el-about">
+                                                    <div class="history-info__el-title">3D Stick размах 2.1 м.</div>
+                                                    <div class="history-info__el-text">доп информация</div>
+                                                </div>
+                                                <div class="history-info__el-count">x2</div>
+                                                <div class="history-info__el-price">680 Р</div>
+                                            </div>
+                                        </div>
+                                        <div class="history-info-footer">
+                                            <div class="history-info-get">
+                                                <svg class="icon">
+                                                    <use xlink:href="#repeat"></use>
+                                                </svg>
+                                                <span>Повторить заказ</span>
+                                            </div>
+                                            <div class="history-info-total">
+                                                <div class="history-info-total__text">Сумма:</div>
+                                                <div class="history-info-total__val">1 184 Р</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block footer-->
+        <div class="footer-black-wrap">
+            <div class="main-cont">
+                <div class="footer-black">
+                    <div class="footer-black-info">
+                        <div class="footer-logo">
+                            <img src="img/logo.svg" alt="" />
+                        </div>
+                        <div class="soc-row soc-row--yellow soc-row--mid">
+                            <a class="soc-row__el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-instagram"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-row__el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-vk"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-row__el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-facebook"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="footer-copyright">© Vlasov.ru, 2016-2019</div>
+                    </div>
+                    <div class="footer-nav">
+                        <div class="footer-title">Меню</div>
+                        <div class="footer-menu">
+                            <a class="footer-menu__el" href="#">главная</a>
+                            <a class="footer-menu__el" href="#">самолеты</a>
+                            <a class="footer-menu__el" href="#">запчати</a>
+                            <a class="footer-menu__el" href="#">лазерная резка</a>
+                            <a class="footer-menu__el" href="#">доставка</a>
+                            <a class="footer-menu__el" href="#">гарантия</a>
+                            <a class="footer-menu__el" href="#">контакты</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="footer-title">Контакты</div>
+                        <div class="footer-contact__el">
+                            <svg class="icon">
+                                <use xlink:href="#phone-call"></use>
+                            </svg>
+                            <a href="tel:8 (495) 225 54 66">8 (495) 225 54 66</a>
+                        </div>
+                        <div class="footer-contact__el">
+                            <svg class="icon">
+                                <use xlink:href="#mail"></use>
+                            </svg>
+                            <a href="mailto:info@vlasov-rc.com">info@vlasov-rc.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-layer">
+            <div class="modal-filter"></div>
+            <div class="modal-wrap">
+                <!--warranty-->
+                <div class="modal modal--seal" data-modal="warranty">
+                    <div class="modal-content">
+                        <img class="seal" src="img/seal.png" alt="" />
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close-fat"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Гарантия</div>
+                        <div class="modal-text text">
+                            <p>Изготовитель предоставляет гарантию на всю продукцию сроком 12 месяцев.</p>
+                            <p>Гарантийные обязательства распространяются на все детали, поставляемые в наборе при условии правильной сборки и эксплуатации модели.</p>
+                            <div class="btn--md btn--mark modal-send modal-hide">ОК</div>
+                        </div>
+                    </div>
+                </div>
+                <!--contact-->
+                <div class="modal" data-modal="contact">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close-fat"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Контакты</div>
+                        <div class="modal-text">
+                            <div class="modal-contact">
+                                <div class="modal-contact__type">Телефон:</div>
+                                <a class="modal-contact__val" href="tel:8 (495) 225 54 66">8 (495) 225 54 66</a>
+                            </div>
+                            <div class="modal-contact">
+                                <div class="modal-contact__type">E-mail:</div>
+                                <a class="modal-contact__val" href="mailto:info@vlasov-rc.com">info@vlasov-rc.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--success message-->
+                <div class="modal modal--sm" data-modal="truemessage">
+                    <div class="modal-content modal-content--true">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close-fat"></use>
+                            </svg>
+                        </div>
+                        <svg class="icon icon--success">
+                            <use xlink:href="#success--color"></use>
+                        </svg>
+                        <div class="modal-text-true">Ваша заявка принята</div>
+                    </div>
+                </div>
+                <!--modal profile-edit-->
+                <div class="modal" data-modal="profile-edit">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close-fat"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Изменить профиль</div>
+                        <form action="#">
+                            <div class="input-row">
+                                <div class="input-row__title">Имя</div>
+                                <input class="input" type="text" name="name" value="Александр" />
+                            </div>
+                            <div class="input-row">
+                                <div class="input-row__title">Телефон:</div>
+                                <input class="input" type="text" name="name" value="+7 923 666 7667" />
+                            </div>
+                            <div class="input-row">
+                                <div class="input-row__title">Почта:</div>
+                                <input class="input" type="text" name="name" value="info@mail.ru" />
+                            </div>
+                            <div class="input-row">
+                                <div class="input-row__title">День рождения:</div>
+                                <input class="input" type="text" name="name" value="30.20.1982" />
+                            </div>
+                            <input class="modal-send" type="submit" value="Cохранить" />
+                        </form>
+                    </div>
+                </div>
+                <!--modal profile-edit === end-->
+                <!--modal adres-edit-->
+                <div class="modal" data-modal="adress-add">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close-fat"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Добавить адрес</div>
+                        <form action="#">
+                            <div class="select-city"></div>
+                            <div class="input-row">
+                                <div class="input-row__title">Улица</div>
+                                <input class="input" type="text" name="name" value="" />
+                            </div>
+                            <div class="input-row-half">
+                                <div class="input-wrap">
+                                    <div class="input-row__title">Улица</div>
+                                    <input class="input" type="text" name="name" value="" />
+                                </div>
+                                <div class="input-wrap">
+                                    <div class="input-row__title">Квартира</div>
+                                    <input class="input" type="text" name="name" value="" />
+                                </div>
+                            </div>
+                            <div class="input-row-half">
+                                <div class="input-wrap">
+                                    <div class="input-row__title">Подъезд</div>
+                                    <input class="input" type="text" name="name" value="" />
+                                </div>
+                                <div class="input-wrap">
+                                    <div class="input-row__title">Этаж</div>
+                                    <input class="input" type="text" name="name" value="" />
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-row__title">Подпись (например: работа)</div>
+                                <input class="input" type="text" name="name" placeholder="" value="" />
+                            </div>
+                            <input class="modal-send" type="submit" value="Cохранить" />
+                        </form>
+                    </div>
+                </div>
+                <!--modal adres-edit === end-->
+                <!--modal adres-edit-->
+                <div class="modal" data-modal="adress-edit">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close-fat"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Изменить адрес</div>
+                        <form action="#">
+                            <div class="select-city"></div>
+                            <div class="input-row">
+                                <div class="input-row__title">Улица</div>
+                                <input class="input" type="text" name="name" value="Ленина" />
+                            </div>
+                            <div class="input-row-half">
+                                <div class="input-wrap">
+                                    <div class="input-row__title">Улица</div>
+                                    <input class="input" type="text" name="name" value="14" />
+                                </div>
+                                <div class="input-wrap">
+                                    <div class="input-row__title">Квартира</div>
+                                    <input class="input" type="text" name="name" value="35" />
+                                </div>
+                            </div>
+                            <div class="input-row-half">
+                                <div class="input-wrap">
+                                    <div class="input-row__title">Подъезд</div>
+                                    <input class="input" type="text" name="name" value="2" />
+                                </div>
+                                <div class="input-wrap">
+                                    <div class="input-row__title">Этаж</div>
+                                    <input class="input" type="text" name="name" value="17" />
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-row__title">Подпись (например: работа)</div>
+                                <input class="input" type="text" name="name" placeholder="Подпись (например: работа)" value="Дом" />
+                            </div>
+                            <input class="modal-send" type="submit" value="Cохранить" />
+                        </form>
+                    </div>
+                </div>
+                <!--modal adres-edit === end-->
+                <!--login-->
+                <div class="modal modal--md" data-modal="login">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close-fat"></use>
+                            </svg>
+                        </div>
+                        <div class="login-drop__head">
+                            <div class="login-toggle login-switch login-toggle--active" data-switch="enter">Вход</div>
+                            <div class="login-toggle login-switch" data-switch="registration">Регистрация</div>
+                        </div>
+                        <!--enter form-->
+                        <div class="login-wrap login-wrap--active" data-cont="enter">
+                            <form class="login-form" action="#">
+                                <input class="input" type="text" placeholder="Электр. почта/Телефон" />
+                                <input class="input" type="text" placeholder="Пароль" />
+                                <input class="btn--md btn--mark" type="submit" value="Войти" />
+                            </form>
+                            <div class="login-remember">
+                                <div class="check-el">
+                                    <label class="style-label style-label--checkbox">
+                                        <input class="sytle-input" type="checkbox" />
+                                        <div class="sytle-input-element">
+                                            <svg class="icon-check">
+                                                <use xlink:href="#checked"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="sytle-input-text">Запомнить меня</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="login-fogot login-switch" data-switch="fogot">Забыли пароль?</div>
+                            <div class="login-soc">
+                                <div class="login-soc__text">Войти с помощью соц. сетей</div>
+                                <div class="soc-row">
+                                    <a class="soc-row__el" href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="#soc-instagram"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="soc-row__el" href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="#soc-vk"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="soc-row__el" href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="#soc-facebook"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--registration form-->
+                        <div class="login-wrap login-wrap--registration" data-cont="registration">
+                            <form class="login-form" action="#">
+                                <input class="input" type="text" placeholder="Имя" />
+                                <input class="input" type="text" placeholder="Телефон" />
+                                <input class="input" type="text" placeholder="E-mail" />
+                                <input class="input" type="password" placeholder="Пароль" />
+                                <input class="input" type="password" placeholder="Повторить пароль" />
+                                <div class="login-remember">
+                                    <div class="check-el">
+                                        <label class="style-label style-label--checkbox">
+                                            <input class="sytle-input" type="checkbox" />
+                                            <div class="sytle-input-element">
+                                                <svg class="icon-check">
+                                                    <use xlink:href="#checked"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="sytle-input-text">Соглашаюсь с условиями обработки персональных данных</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <input class="btn--md btn--mark" type="submit" value="Войти" />
+                            </form>
+                            <div class="login-soc">
+                                <div class="login-soc__text">Зарегистрироваться с помощью соц. сетей</div>
+                                <div class="login-soc-row">
+                                    <a class="login-soc-el" href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="#vk--color"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="login-soc-el" href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="#facebook--color"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--registration form-->
+                        <div class="login-wrap login-wrap--registration" data-cont="fogot">
+                            <div class="modal-text text">
+                                <p>Укажите имя пользователя или адрес вашей электронной почты и мы вышлем вам на почту ссылку на создание нового пароля</p>
+                            </div>
+                            <form class="login-form" action="#">
+                                <input class="input" type="text" placeholder="E-mail или Имя пользователя" />
+                                <div class="login-btn-code login-switch" data-switch="code">Отправить код</div>
+                            </form>
+                        </div>
+                        <div class="login-wrap login-wrap--registration" data-cont="code">
+                            <div class="login-code-text">Вам на e-mail/телефон отправлен код подтверждения</div>
+                            <form class="login-form" action="#">
+                                <input class="input" type="text" placeholder="Введите код" />
+                                <div class="login-btn-code">Подтвердить</div>
+                                <div class="login-btn-recode">Выслать повторно</div>
+                                <div class="login-btn-back login-switch" data-switch="fogot">Назад к восстановлению</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--cart === end-->
+            </div>
+        </div>
+        <!--block footer end-->
+    </div>
+    <script src="js/combined.js"></script>
+    <script src="js/add-on.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/script-edit.js"></script>
+</body>
+
+</html>

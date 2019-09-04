@@ -1,0 +1,118 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+
+	+header("black")
+	.content.content--extend.content--gray
+		.main-cont
+			.lk
+				.lk-user
+					.lk-user__wrap
+						.lk-title
+							.lk-title__text  мой профиль
+							.user-config
+								.user-config__el.user-config__el--edit.modal-get(data-modal="profile-edit")
+									+icon("edit","icon")
+								.user-config__el.user-config__el--remove
+									+icon("exit","icon")
+						.user
+							.user-row
+								.user__name Имя:
+								.user__val
+									.user__val-info
+										.user__val-text Александр
+										//.user__val-edit Изменить
+							.user-row
+								.user__name Телефон:
+								.user__val +7 923 666 7667
+							.user-row
+								.user__name День рождения:
+								.user__val 30 Сентября
+							.user-row
+								.user__name Email:
+								.user__val info@mail.ru
+							.user-row
+								.user__name Бонусные баллы
+								.user__val.user__val--bonus 140 Б
+
+						//.lk-title-sub Привязанные карты
+						//.user-card
+							a(href="#").user-card__el.user-card__el--active
+								.user-card-remove
+									+icon("close","icon")
+								.user-card-icon
+									+icon("visa","icon")
+								.user-card-numb 7878 988* **** 3445
+							- for (var i=0;i<2;i++)
+							.user-card__el.user-card__el--add
+								.user-card__add
+									+icon("plus","icon")
+								.user-card__add-text Привязать карту
+
+						.lk-title-sub Адреса
+						.lk-adr
+							.lk-adr__el
+								.lk-adr-conf
+									.lk-adr-conf__el.lk-adr-conf__el--edit.modal-get(data-modal="adress-edit")
+										+icon("edit","icon")
+									.lk-adr-conf__el.lk-adr-conf__el--remove
+										+icon("garbage","icon")
+								.lk-adr-text Дом
+								.lk-adr-adress г.Барнаул, пр.Ленина 62-2
+							.lk-adr__el
+								.lk-adr-conf
+									.lk-adr-conf__el.lk-adr-conf__el--edit.modal-get(data-modal="adress-edit")
+										+icon("edit","icon")
+									.lk-adr-conf__el.lk-adr-conf__el--remove
+										+icon("garbage","icon")
+								.lk-adr-text Работа
+								.lk-adr-adress г.Москва, ул.Победы 62
+							.lk-adr__el.lk-adr__el--add.modal-get(data-modal="adress-add")
+								.lk-adr__add
+									+icon("plus","icon")
+								.lk-adr__add-text Добавить адрес
+
+				.lk-order
+					.lk-order__wrap
+						.history-title История заказов
+						.history
+							- for (var j=0;j<3;j++)
+								.history-card(class=j === 0 ? 'history-card--active' : '')
+
+									.history-card__wrap
+										.history-card__icon
+											+icon("arrow-down","icon")
+										.history-card__info
+											.history-card__date 28 Сентября, 2017
+											.history-card__numb № 43576
+
+										.history-card__price
+											.history-card__price_text Сумма:
+											.history-card__price_val 1100 Р
+									.history-info(class=j === 0 ? 'history-info--active' : '')
+										.history-info__head
+											//.history-info__head-date 28 Апреля 2017
+											.history-info__head-state Доставлен
+												// use .history-info__head-state--false .history-info__head-state--wait
+											.history-info__head-numb № 43576
+										- for (var k=0;k<4;k++)
+											.history-info__list
+												.history-info__el
+													a(href="#" style="background-image:url('img/item.png')").history-info__el-img
+													.history-info__el-about
+														.history-info__el-title 3D Stick размах 2.1 м.
+														.history-info__el-text доп информация
+													.history-info__el-count x2
+													.history-info__el-price 680 Р
+										.history-info-footer
+											.history-info-get
+												+icon("repeat","icon")
+												span Повторить заказ
+											.history-info-total
+												.history-info-total__text Сумма:
+												.history-info-total__val 1 184 Р
+
+	+footer("black")
+
+include ./block_html/_script.pug

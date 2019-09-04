@@ -144,32 +144,6 @@
             </div>
         </div>
         <!--block footer-->
-        <div class="footer">
-            <div class="footer-spin" style="background-image:url('img/spin.png')">
-                <div class="main-cont">
-                    <div class="footer-soc">
-                        <div class="soc-row">
-                            <a class="soc-row__el" href="#">
-                                <svg class="icon">
-                                    <use xlink:href="#soc-instagram"></use>
-                                </svg>
-                            </a>
-                            <a class="soc-row__el" href="#">
-                                <svg class="icon">
-                                    <use xlink:href="#soc-vk"></use>
-                                </svg>
-                            </a>
-                            <a class="soc-row__el" href="#">
-                                <svg class="icon">
-                                    <use xlink:href="#soc-facebook"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--block footer end-->
         <div class="modal-layer">
             <div class="modal-filter"></div>
             <div class="modal-wrap">
@@ -212,16 +186,256 @@
                     </div>
                 </div>
                 <!--success message-->
-                <div class="modal" data-modal="truemessage">
+                <div class="modal modal--sm" data-modal="truemessage">
                     <div class="modal-content modal-content--true">
-                        <svg class="icon">
-                            <use xlink:href="#interface"></use>
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close-fat"></use>
+                            </svg>
+                        </div>
+                        <svg class="icon icon--success">
+                            <use xlink:href="#success--color"></use>
                         </svg>
                         <div class="modal-text-true">Ваша заявка принята</div>
                     </div>
                 </div>
+                <!--modal profile-edit-->
+                <div class="modal" data-modal="profile-edit">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close-fat"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Изменить профиль</div>
+                        <form action="#">
+                            <div class="input-row">
+                                <div class="input-row__title">Имя</div>
+                                <input class="input" type="text" name="name" value="Александр" />
+                            </div>
+                            <div class="input-row">
+                                <div class="input-row__title">Телефон:</div>
+                                <input class="input" type="text" name="name" value="+7 923 666 7667" />
+                            </div>
+                            <div class="input-row">
+                                <div class="input-row__title">Почта:</div>
+                                <input class="input" type="text" name="name" value="info@mail.ru" />
+                            </div>
+                            <div class="input-row">
+                                <div class="input-row__title">День рождения:</div>
+                                <input class="input" type="text" name="name" value="30.20.1982" />
+                            </div>
+                            <input class="modal-send" type="submit" value="Cохранить" />
+                        </form>
+                    </div>
+                </div>
+                <!--modal profile-edit === end-->
+                <!--modal adres-edit-->
+                <div class="modal" data-modal="adress-add">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close-fat"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Добавить адрес</div>
+                        <form action="#">
+                            <div class="select-city"></div>
+                            <div class="input-row">
+                                <div class="input-row__title">Улица</div>
+                                <input class="input" type="text" name="name" value="" />
+                            </div>
+                            <div class="input-row-half">
+                                <div class="input-wrap">
+                                    <div class="input-row__title">Улица</div>
+                                    <input class="input" type="text" name="name" value="" />
+                                </div>
+                                <div class="input-wrap">
+                                    <div class="input-row__title">Квартира</div>
+                                    <input class="input" type="text" name="name" value="" />
+                                </div>
+                            </div>
+                            <div class="input-row-half">
+                                <div class="input-wrap">
+                                    <div class="input-row__title">Подъезд</div>
+                                    <input class="input" type="text" name="name" value="" />
+                                </div>
+                                <div class="input-wrap">
+                                    <div class="input-row__title">Этаж</div>
+                                    <input class="input" type="text" name="name" value="" />
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-row__title">Подпись (например: работа)</div>
+                                <input class="input" type="text" name="name" placeholder="" value="" />
+                            </div>
+                            <input class="modal-send" type="submit" value="Cохранить" />
+                        </form>
+                    </div>
+                </div>
+                <!--modal adres-edit === end-->
+                <!--modal adres-edit-->
+                <div class="modal" data-modal="adress-edit">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close-fat"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Изменить адрес</div>
+                        <form action="#">
+                            <div class="select-city"></div>
+                            <div class="input-row">
+                                <div class="input-row__title">Улица</div>
+                                <input class="input" type="text" name="name" value="Ленина" />
+                            </div>
+                            <div class="input-row-half">
+                                <div class="input-wrap">
+                                    <div class="input-row__title">Улица</div>
+                                    <input class="input" type="text" name="name" value="14" />
+                                </div>
+                                <div class="input-wrap">
+                                    <div class="input-row__title">Квартира</div>
+                                    <input class="input" type="text" name="name" value="35" />
+                                </div>
+                            </div>
+                            <div class="input-row-half">
+                                <div class="input-wrap">
+                                    <div class="input-row__title">Подъезд</div>
+                                    <input class="input" type="text" name="name" value="2" />
+                                </div>
+                                <div class="input-wrap">
+                                    <div class="input-row__title">Этаж</div>
+                                    <input class="input" type="text" name="name" value="17" />
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-row__title">Подпись (например: работа)</div>
+                                <input class="input" type="text" name="name" placeholder="Подпись (например: работа)" value="Дом" />
+                            </div>
+                            <input class="modal-send" type="submit" value="Cохранить" />
+                        </form>
+                    </div>
+                </div>
+                <!--modal adres-edit === end-->
+                <!--login-->
+                <div class="modal modal--md" data-modal="login">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close-fat"></use>
+                            </svg>
+                        </div>
+                        <div class="login-drop__head">
+                            <div class="login-toggle login-switch login-toggle--active" data-switch="enter">Вход</div>
+                            <div class="login-toggle login-switch" data-switch="registration">Регистрация</div>
+                        </div>
+                        <!--enter form-->
+                        <div class="login-wrap login-wrap--active" data-cont="enter">
+                            <form class="login-form" action="#">
+                                <input class="input" type="text" placeholder="Электр. почта/Телефон" />
+                                <input class="input" type="text" placeholder="Пароль" />
+                                <input class="btn--md btn--mark" type="submit" value="Войти" />
+                            </form>
+                            <div class="login-remember">
+                                <div class="check-el">
+                                    <label class="style-label style-label--checkbox">
+                                        <input class="sytle-input" type="checkbox" />
+                                        <div class="sytle-input-element">
+                                            <svg class="icon-check">
+                                                <use xlink:href="#checked"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="sytle-input-text">Запомнить меня</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="login-fogot login-switch" data-switch="fogot">Забыли пароль?</div>
+                            <div class="login-soc">
+                                <div class="login-soc__text">Войти с помощью соц. сетей</div>
+                                <div class="soc-row">
+                                    <a class="soc-row__el" href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="#soc-instagram"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="soc-row__el" href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="#soc-vk"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="soc-row__el" href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="#soc-facebook"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--registration form-->
+                        <div class="login-wrap login-wrap--registration" data-cont="registration">
+                            <form class="login-form" action="#">
+                                <input class="input" type="text" placeholder="Имя" />
+                                <input class="input" type="text" placeholder="Телефон" />
+                                <input class="input" type="text" placeholder="E-mail" />
+                                <input class="input" type="password" placeholder="Пароль" />
+                                <input class="input" type="password" placeholder="Повторить пароль" />
+                                <div class="login-remember">
+                                    <div class="check-el">
+                                        <label class="style-label style-label--checkbox">
+                                            <input class="sytle-input" type="checkbox" />
+                                            <div class="sytle-input-element">
+                                                <svg class="icon-check">
+                                                    <use xlink:href="#checked"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="sytle-input-text">Соглашаюсь с условиями обработки персональных данных</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <input class="btn--md btn--mark" type="submit" value="Войти" />
+                            </form>
+                            <div class="login-soc">
+                                <div class="login-soc__text">Зарегистрироваться с помощью соц. сетей</div>
+                                <div class="login-soc-row">
+                                    <a class="login-soc-el" href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="#vk--color"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="login-soc-el" href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="#facebook--color"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--registration form-->
+                        <div class="login-wrap login-wrap--registration" data-cont="fogot">
+                            <div class="modal-text text">
+                                <p>Укажите имя пользователя или адрес вашей электронной почты и мы вышлем вам на почту ссылку на создание нового пароля</p>
+                            </div>
+                            <form class="login-form" action="#">
+                                <input class="input" type="text" placeholder="E-mail или Имя пользователя" />
+                                <div class="login-btn-code login-switch" data-switch="code">Отправить код</div>
+                            </form>
+                        </div>
+                        <div class="login-wrap login-wrap--registration" data-cont="code">
+                            <div class="login-code-text">Вам на e-mail/телефон отправлен код подтверждения</div>
+                            <form class="login-form" action="#">
+                                <input class="input" type="text" placeholder="Введите код" />
+                                <div class="login-btn-code">Подтвердить</div>
+                                <div class="login-btn-recode">Выслать повторно</div>
+                                <div class="login-btn-back login-switch" data-switch="fogot">Назад к восстановлению</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--cart === end-->
             </div>
         </div>
+        <!--block footer end-->
     </div>
     <script src="js/combined.js"></script>
     <script src="js/add-on.js"></script>

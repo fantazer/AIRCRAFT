@@ -1,0 +1,20 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+
+	+header("black")
+	.content.content--extend
+		.main-cont
+			.success
+				.success-icon
+					+icon("success--color","icon")
+				.success-title Спасибо за заказ!
+				.success-text.text
+					p Ваш заказ №1444275369 на сумму 10 000 руб успешно оформлен. Заказ включает 7 ед. товара. Мы отправим Вам SMS с подтверждением заказа и датой доставки, оператор свяжется с Вами, в случае возникновения вопросов.
+					p Вы всегда можете проверить
+				.success-link статус выполнения своего заказа
+				a(href="#").success-get перейти к личному кабинету
+	+footer("black")
+
+include ./block_html/_script.pug

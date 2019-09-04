@@ -2,8 +2,8 @@ include block_html/_style.pug
 include block_html/_include.pug
 
 .page
-	.header--yellow
-		+header("black")
+
+	+header("black")
 	.content.content--extend
 		.main-cont
 			.section-title.section-title--left Оформление заказа
@@ -14,11 +14,26 @@ include block_html/_include.pug
 							.input-row.input-row--person
 								input(type="text" placeholder="Ваше имя" class="input input-row--name")
 								input(type="text" placeholder="Телефон" class="input input-row--phone")
+								input(type="text" placeholder="Email" class="input input-row--phone")
+							.order-auth
+								.order-auth__el
+									.check-el.check-el--agree
+										label.style-label.style-label--checkbox
+											input(type="checkbox" name="agree").sytle-input
+											.sytle-input-element
+												+icon("check","icon icon-check")
+											.sytle-input-text Зарегистрироваться
+								.order-auth__el
+									.order-auth__text Вы уже регистрировались?
+									.order-auth__link Войти в аккаунт
 							.order-tab
 								.order-tab__el.order-tab__el--active(data-tab="deliver") Доставка
 								.order-tab__el(data-tab="self") Самовывоз
 							.order-cont
 								.order-cont__el(data-tab="deliver")
+									.order-cont-deliver Доставка производится Почтой России
+									.input-row
+										input(type="text" placeholder="Город" class="input")
 									.input-row
 										input(type="text" placeholder="Улица" class="input")
 									.input-row.input-row--adress
@@ -44,10 +59,10 @@ include block_html/_include.pug
 									.payment__type-cont-el(data-tab="card")
 										.payment-card
 											- for (var i=0;i<3;i++)
-											.payment-card__el(class=i === 0 ? 'payment-card__el--active' : '')
-												.payment-card__el-icon
-													+icon("visa","icon")
-												.payment-card__el-val 7878 988* **** 3445
+												.payment-card__el(class=i === 0 ? 'payment-card__el--active' : '')
+													.payment-card__el-icon
+														+icon("credit-card","icon")
+													.payment-card__el-val 7878 988* **** 3445
 											a(href="#").payment-card__other другой картой
 							.order-title Комментарий к заказу
 							.input-row
@@ -72,19 +87,15 @@ include block_html/_include.pug
 									+icon("cart","icon")
 								.basket-empty__title Ваша корзина пуста =(
 								.basket-empty__text Добавьте что-нибудь из меню
-								a(href="#").basket-empty__get Вернуться в меню
+								a(href="#").basket-empty__get Вернуться в корзину
 
 					.basket-cost
 						.basket-title сумма заказа
-						.basket-price 1498р
+						.basket-price 1498 р
 						.basket-sale
 							.basket-sale__text скидка
 							.basket-sale__val -100р
-					.basket-promo
-						//toggle class .basket-promo__input--true .basket-promo__input--false
-						.basket-promo__input
-							+icon("checked","icon icon-true")
-							+icon("close","icon icon-false")
+
 					.check-el.check-el--agree
 						label.style-label.style-label--checkbox
 							input(type="checkbox" name="agree").sytle-input

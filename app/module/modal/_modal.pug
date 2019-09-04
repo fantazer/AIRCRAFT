@@ -48,10 +48,45 @@ mixin modal()
 							.input-row__title Телефон:
 							input(type="text" name="name"  value="+7 923 666 7667").input
 						.input-row
+							.input-row__title Почта:
+							input(type="text" name="name"  value="info@mail.ru").input
+						.input-row
 							.input-row__title День рождения:
 							input(type="text" name="name"  value="30.20.1982").input
 						input(type="submit" value="Cохранить").modal-send
 			//modal profile-edit === end
+
+			//modal adres-edit
+			.modal(data-modal="adress-add")
+				.modal-content
+					.modal-close
+						+icon("close-fat","icon")
+					.modal-title Добавить адрес
+					form( action="#")
+						.select-city
+						.input-row
+							.input-row__title Улица
+							input(type="text" name="name"  value="").input
+						.input-row-half
+							.input-wrap
+								.input-row__title Улица
+								input(type="text" name="name"  value="").input
+							.input-wrap
+								.input-row__title Квартира
+								input(type="text" name="name"  value="").input
+						.input-row-half
+							.input-wrap
+								.input-row__title Подъезд
+								input(type="text" name="name"  value="").input
+							.input-wrap
+								.input-row__title Этаж
+								input(type="text" name="name"  value="").input
+						.input-row
+							.input-row__title Подпись (например: работа)
+							input(type="text" name="name" placeholder="" value="").input
+						input(type="submit" value="Cохранить").modal-send
+			//modal adres-edit === end
+
 
 			//modal adres-edit
 			.modal(data-modal="adress-edit")
