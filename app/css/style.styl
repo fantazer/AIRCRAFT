@@ -83,7 +83,7 @@ body
 .modal-content
 	+below(640px)
 		height: 100%
-		padding: 20px 10px
+		padding: 40px 20px
 		overflow-y scroll
 		width: 100%!important
 		br(0)
@@ -128,7 +128,7 @@ body
 
 .modal-title
 	+below(768px)
-		font-size: 20px
+		font-size: 24px
 	margin-bottom: 20px
 	text-align: center
 	color black
@@ -297,7 +297,7 @@ select.select-beauty
 		display: none
 	.icon
 		size 25px
-		fill white
+		fill black
 	.icon-close
 		display: none
 
@@ -310,18 +310,15 @@ select.select-beauty
 .slide-menu
 	+above(1025px)
 		display: none !important
-	+below(640px)
-		top: 51px //Высота хедера
 	+below(480px)
 		width: 100%
 	background: black
 	color white
 	position: fixed
-	height: calc(100% - 50px) //Отступ хедер
+	height: 100% //Отступ хедер
 	z-index 1250
-	top 54px
+	top 0
 	right 0
-	padding: 25px
 	width: 320px
 	transform translateX(100%)
 	tr(all)
@@ -365,17 +362,27 @@ select.select-beauty
 
 
 .header
+	+below(480px)
+		padding-top: 5px
 	position relative
 	z-index 5
 .head
+	+below(1024px)
+		padding: 0
 	f()
 	align-items center
 	justify-content space-between
 	padding: 20px 0
 .head-logo
+	+below(1024px)
+		width: 200px
+	+below(640px)
+		width: 120px
 	width: 300px
 
 .head-nav
+	+below(1024px)
+		display none
 	width: 60%
 	flex(between)
 .head-nav__el
@@ -443,6 +450,11 @@ select.select-beauty
 	top 0
 	left 0
 .footer-spin
+	+below(1280px)
+		background-size initial
+	+below(1024px)
+		background: black
+		background-image: none!important
 	bg-full()
 	width: 100%
 	background-position: center bottom -80px;
@@ -461,15 +473,24 @@ select.select-beauty
 .soc-row--mid
 	flex(mid)
 .footer-soc
+	+below(1024px)
+		height:auto
 	height: 100px
 	f()
 	align-items:center
 	justify-content flex-end
 	.soc-row
+		+below(1024px)
+			margin 10px auto
+
 		margin-top: 30px
 	.soc-row__el
+		+below(1024px)
+			size 25px
 		border-color $yellow
 		.icon
+			+below(1024px)
+				size 10px
 			fill $yellow
 .soc-row__el
 	&:hover
@@ -508,6 +529,13 @@ select.select-beauty
 	font-size: 82px
 	margin-bottom: 30px
 	font-weight: 700
+	+below(1200px)
+		font-size: 7vw
+		width: 70%
+	+below(640px)
+		font-size:10vw
+		margin-top: -15%
+
 .slogan-sub
 	line-height: 1.6
 
@@ -520,6 +548,8 @@ select.select-beauty
 		width: 100%
 
 .section-yellow
+	+below(1024px)
+		padding-top: 100px
 	padding-top: 200px
 	bg-full()
 	background-size 350vw
@@ -539,6 +569,7 @@ select.select-beauty
 	font-weight 700
 	text-transform uppercase
 	margin-bottom: 10px
+	line-height: 1.6
 .section-text
 	center(690px,0)
 	text-align center
@@ -560,6 +591,8 @@ select.select-beauty
 
 //Навигация снаружи
 .slider-wrap--simple
+	+below(640px)
+		padding: 0 30px
 	padding: 0 20px
 	.slider-control
 		round()
@@ -577,8 +610,12 @@ select.select-beauty
 		.icon
 			size 25px
 	.slider-control--left
+		+below(640px)
+			left -10px
 		left -20px
 	.slider-control--right
+		+below(640px)
+			right -10px
 		right -20px
 //Навигация снаружи end
 
@@ -593,11 +630,17 @@ select.select-beauty
 		cp()
 		margin-top: -50px
 		.icon
+			+below(640px)
+				size 30px
 			fill black
 			size 50px
 	.slider-control--left
+		+below(640px)
+			left -10px
 		left 0
 	.slider-control--right
+		+below(640px)
+			right -10px
 		right 0
 	.slider-item
 		width: 80%
@@ -616,6 +659,7 @@ select.select-beauty
 	align-items: center
 	justify-content: center
 	bottom 0
+	left 0
 	li
 		+below(720px)
 			size 10px
@@ -660,8 +704,13 @@ select.select-beauty
 
 .section
 	padding: 60px 0
-
+	+below(640px)
+		padding: 30px 0
 .advant
+	+below(1024px)
+		grid-gap 5%
+	+below(640px)
+		grid-template-columns: repeat(1, 1fr)
 	display: grid
 	grid-gap 15%
 	grid-template-columns: repeat(3, 1fr)
@@ -701,12 +750,21 @@ thead
 		font-weight: 700
 
 .price-cont
+	+below(640px)
+		fw()
 	f()
 	justify-content space-between
 
 .price
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
 	width: 50%
 .price-info
+	+below(1024px)
+		width: 45%
+	+below(640px)
+		width: 100%
 	line-height: 1.6
 	padding-left: 30px
 	border-left 2px solid $yellow
@@ -880,9 +938,13 @@ thead
 
 .head-black
 	.head
+		+below(1024px)
+			margin-top: 0
 		margin-top: -40px
 		padding 0
 .head-top-wrap
+	+below(1024px)
+		display none
 	background: #000000
 	padding: 10px 0
 	color white
@@ -944,6 +1006,7 @@ thead
 .cart
 	flex(mid)
 	z-index 10
+	position relative
 .cart-icon
 	.icon
 		size 20px
@@ -958,24 +1021,46 @@ thead
 	font-size: 10px
 	background: red
 	top -3px
-	right: 0
+	right: -3px
 
 .footer-black-wrap
+	+below(640px)
+		padding: 30px 0
 	background: black
 	padding: 50px 0
 	margin-top: 70px
 //.main-cont
 .footer-black
+	fw()
 	f()
 	justify-content space-between
 .footer-black-info
+	+below(640px)
+		width: 100%
+		margin-top: 0
+		flex(between)
+		margin-bottom: 20px
 	width: 30%
 	margin-top: -80px
+.footer-logo
+	img
+		+below(640px)
+			width: 170px
+		+below(480px)
+			width: 100px
+
 .footer-copyright
+	+below(640px)
+		display none
 	color white
 	text-align center
 	margin-top: 60px
 .footer-nav
+	+below(640px)
+		width: 48%
+	+below(480px)
+		width: 100%
+		margin-bottom: 30px
 	width: 30%
 .footer-title
 	color white
@@ -985,11 +1070,18 @@ thead
 .footer-menu
 	column-count 2
 .footer-menu__el
+	+below(768px)
+		text-transform: none
+	line-height: 1.6
 	up()
 	color white
 	display block
 	margin-bottom: 20px
 .footer-contact
+	+below(640px)
+		width: 48%
+	+below(480px)
+		width: 100%
 	width: 30%
 .footer-contact__el
 	f()
@@ -1035,23 +1127,33 @@ thead
 	.slick-list
 		margin: 0 -10px
 .gallery-main-slider
-	+below(640px)
-		display none
+
 	margin-bottom 20px
 
 .product
+	+below(640px)
+		fw()
 	f()
 	justify-content space-between
 
 .gallery-img
+	+below(640px)
+		width: 100%
+		margin-bottom: 30px
+
 	width: 55%
 
 .product-wrap
+	+below(1024px)
+		padding: 30px 0
 	padding: 80px 0
 	background: $yellow
 	margin-bottom: 50px
 
 .product-info
+	+below(768px)
+		+below(640px)
+			width: 100%
 	width: 40%
 .product-title
 	font-family "Roboto Slab"
@@ -1062,13 +1164,25 @@ thead
 	margin-bottom: 20px
 
 .product-cost
+	+below(960px)
+		fw()
 	flex(between)
 .product-cost-info
+	+below(960px)
+		width: 100%
+		margin-bottom: 20px
+	+below(480px)
+		justify-content center
 	f()
 	align-items flex-end
 	font-family "Roboto Slab"
 	margin-right: 30px
+	white-space nowrap
 .product-cost__val
+	+below(480px)
+		font-weight: 700
+		font-size: 38px
+		text-align center
 	line-height: 1
 	@extend .type--xl
 	font-weight 400
@@ -1077,15 +1191,26 @@ thead
 	@extend .type--mdx
 
 .product-get
+	+below(960px)
+		width: 100%
 	@extend .btn--md
 	@extend .btn--white
 	min-width 150px
 
 //.product-tab
 .product-tab-head
+	+below(640px)
+		overflow-x: scroll
 	f()
 	border-bottom 1px solid $border-color
 .product-tab-head__el
+	+below(1024px)
+		width: 100%
+		font-size: 18px
+		padding: 20px
+	+below(640px)
+		font-size: 14px
+		white-space nowrap
 	padding: 30px
 	font-family "Roboto Slab"
 	@extend .type--lg
@@ -1103,6 +1228,8 @@ thead
 	font-weight: 700
 //.product-tab-cont
 .product-tab-cont__el
+	+below(640px)
+		padding: 30px 0 0 0
 	display none
 	padding: 50px 0
 .product-tab-cont__el--active
@@ -1121,23 +1248,34 @@ thead
 	border-bottom 1px dashed #00000017
 	flex-grow 1
 .book-row__value
+	text-align: right
 	max-width: 50%
-	white-space nowrap
 	vertical-align: bottom
 	opacity: .8
 .product-char--multy
+	+below(640px)
+		column-count 1
 	column-count 2
 	column-gap 60px
-	column-fill: auto
 
 .product-char-wrap
+	+below(640px)
+		fw()
 	f()
 	justify-content space-between
 	align-items:flex-start
-
 	.product-char
+		+below(640px)
+			width: 100%
 		width: 50%
+.product-char
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
+	//width: 50%
 .product-note
+	+below(640px)
+		width: 100%
 	width: 300px
 	padding: 30px
 	background: $yellow
@@ -1180,7 +1318,8 @@ thead
 	+below(640px)
 		fw()
 		position: relative
-		padding-bottom: 40px
+		flex(mid)
+		fl()
 	margin: 10px 0
 	padding: 10px 30px
 	border-bottom 1px solid $border-color
@@ -1190,6 +1329,8 @@ thead
 .basket-el__img
 	+below(640px)
 		size(70px)
+		align-self center
+		margin-right: 0
 	br(10px)
 	bg-full()
 	background-size contain
@@ -1198,8 +1339,9 @@ thead
 	padding: 7% 10%
 .basket-el__info
 	+below(640px)
-		width calc(100% - 90px)
-		margin-bottom: 20px
+		width: 100%
+		//width calc(100% - 90px)
+		text-align center
 	width: 50%
 .basket-el__title
 	+below(640px)
@@ -1219,21 +1361,24 @@ thead
 	+below(768px)
 		margin-left: 20px
 	+below(640px)
-		margin-left: 90px
+		margin-left: 0
+		margin-top: 10px
 	width: 120px
 //.elements-icr-block
 .basket-el__price
 	+below(640px)
-		font-size: 18px
-		width: auto
+		width: 100%
+		text-align: center
+		margin: 10px 0
+		font-size: 28px
 	width: 15%
 	text-align: center
 	@extend .type--lg
 	font-weight 700
 .basket-el__remove
 	+below(640px)
-		top 0
-		right 0
+		top 10px
+		right 10px
 		position: absolute
 	.icon
 		+below(640px)
@@ -1255,6 +1400,7 @@ thead
 		margin-left: auto
 		margin-right: auto
 		max-width 480px
+		margin-top: 20px
 	width: 25%
 	padding:0 0 40px 25px
 	margin-left: 25px
@@ -1419,9 +1565,12 @@ thead
 .content--extend
 	padding-top: 50px
 .content--gray
+	+below(1024px)
+		margin-top: 0
 	background: #fafafa
 	margin-top: -35px
-	padding-top: 90px
+	padding: 90px 0
+	margin-bottom: -70px
 // ORDER
 .order-tab
 	f()
@@ -1472,18 +1621,16 @@ thead
 		margin-bottom: 20px
 
 .basket-cont
-	+below(1024px)
-		width: calc(100% - 340px)
 	width: 45%
 	+below(768px)
 		width: 100%
 
 .input-row--adress
-	+below(640px)
+	+below(960px)
 		fw()
 	flex(between)
 	.input
-		+below(640px)
+		+below(960px)
 			width: 48%
 		width: 23%
 .order-title
@@ -1493,15 +1640,23 @@ thead
 .payment__type__el
 	margin-bottom: 20px
 .panel
+	+below(1200px)
+		width: 48%
+	+below(768px)
+		center(480px,0)
 	width: 40%
 	.basket-list
 		width: 100%
 		margin-bottom: 40px
 	.basket-el
+		+below(640px)
+			padding: 10px
 		padding: 20px 10px
 		fw()
 		position relative
 	.basket-el__info
+		+below(640px)
+			width: 100%
 		width calc(100% - 140px)
 	.basket-el__img
 		size 70px
@@ -1511,7 +1666,12 @@ thead
 		right: 10px
 		.icon
 			size 20px
+	.basket-el__incr
+		+below(640px)
+			margin:10px auto
 .basket-el__cost
+	+below(640px)
+		fw()
 	flex(between)
 
 .payment-card__el
@@ -1550,6 +1710,10 @@ thead
 	.icon
 		fill white
 
+.payment-container
+	+below(640px)
+		margin-top: -40px
+
 .payment-wrap
 	margin-bottom: 40px
 .order-cont
@@ -1560,6 +1724,8 @@ thead
 	color #8d8d8d
 
 .order-auth
+	+below(640px)
+		grid-template-columns: 1fr
 	display: grid
 	grid-gap 20px
 	grid-template-columns: repeat(2, 1fr)
@@ -1650,6 +1816,9 @@ thead
 .user
 	+below(640px)
 		margin-bottom: 30px
+		display: grid
+		grid-gap 20px
+		grid-template-columns: repeat(2, 1fr)
 	margin-bottom: 50px
 .user-row
 	+below(640px)
@@ -1826,7 +1995,6 @@ thead
 .lk-order
 	+below(1024px)
 		padding: 30px 10px
-		background: $border-color
 		margin-left: -10px
 		margin-right: -10px
 		width calc(100% + 20px)
@@ -1915,6 +2083,8 @@ thead
 	+below(640px)
 		margin-bottom: 10px
 .history-card__numb
+	+below(640px)
+		margin-bottom: 10px
 	opacity .6
 .history-card__price
 	+below(640px)
@@ -2042,7 +2212,6 @@ thead
 	size 40px
 	border 1px solid $border-color
 	flex(mid)
-	round()
 	margin-left: auto
 	margin-right: 10%
 .history-info__el-price
@@ -2153,6 +2322,8 @@ thead
 		border-radius 0 0 10px 10px
 
 .history-card__icon
+	+below(640px)
+		margin-bottom: 20px
 	size 30px
 	round()
 	flex(mid)
@@ -2171,6 +2342,8 @@ thead
 .success-icon
 	margin-bottom: 20px
 	.icon
+		+below(768px)
+			size 120px
 		size 200px
 .success-title
 	@extend .type--xl
@@ -2191,3 +2364,125 @@ thead
 	@extend .btn--md
 	@extend .btn--mark
 	padding: 20px 50px
+
+
+.mobile-location
+	f()
+	align-items: center
+	padding: 20px 20px 0 20px
+.mobile-location__icon
+	margin-right: 10px
+	.icon
+		fill $yellow
+		size 25px
+.mobile-location__val
+	f()
+	color $yellow
+	font-weight: 600
+.mobile-phone
+	f()
+	padding: 20px
+.mobile-phone__icon
+	margin-right: 10px
+	margin-top: 4px
+	.icon
+		size 20px
+		fill $yellow
+.mobile-phone__val
+	color white
+	@extend .type--lg
+	font-weight 700
+	display: block
+	margin-right: 20px
+	&:hover
+		color $yellow
+.mobile-mail
+	color white
+	opacity: .6
+	margin-top: 5px
+	display inline-block
+	&:hover
+		color $yellow
+.mobile-lk
+	f()
+	align-items: center
+	padding: 20px
+	border-bottom 1px solid #423d39
+	border-top 1px solid #423d39
+	margin-top: -1px
+	position: relative
+	.icon
+		size 20px
+		margin-right: 10px
+		fill $yellow
+	span
+		color white
+		font-size: 18px
+		font-weight 600
+	&:hover
+		span
+			color $yellow!important
+.mobile-lk__auth
+	+below(640px)
+		top -5px
+		right: -3px
+	position: absolute
+	top -10px
+	right: 0
+	.icon
+		size 12px
+		fill $green
+.mobile-menu
+	padding: 20px 0
+.mobile-menu__el
+	@extend .type--md
+	display: block
+	color white
+	margin-bottom: 25px
+	padding-left: 50px
+	font-size: 18px
+	font-weight: 600
+	tr()
+	up()
+	font-family: "Roboto Slab";
+	&:last-child
+		margin-bottom: 0
+	&:hover
+		color $yellow
+.mobile-row
+	font-weight: 600
+	padding: 20px
+	border-bottom 1px solid #423d39
+	a
+		color white
+		font-size: 18px
+.mobile-row--deliver
+	padding-left: 50px
+
+.slide-menu-close
+	position absolute
+	top: 15px
+	right 15px
+	cp()
+	.icon
+		size 15px
+		fill white
+
+.mobile-logo
+	f()
+	align-items center
+	padding: 30px 20px 20px 20px
+	border-bottom 1px solid #423d39
+	.cart
+		margin-left: 20px
+		.cart-icon
+			.icon
+				size 26px
+				margin-top: 10px
+		.cart-val
+			top 3px
+			right -5px
+	img
+		width: 100px
+	.lang-toggle
+		margin-left: auto

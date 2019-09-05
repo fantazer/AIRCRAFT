@@ -17,6 +17,45 @@ mixin head()
             a(href="#" class=i === 1 ? 'head-nav__el--active' : '').head-nav__el #{item}
           .modal-get.head-nav__el(data-modal="warranty") гарантия
           .modal-get.head-nav__el(data-modal="contact") контакты
+        .head-toggle
+          +icon("menu","icon icon-open")
+      .slide-menu
+        .slide-menu-close
+          +icon("close-fat","icon")
+        
+        .mobile-logo
+          a(href="/")
+            img(src="img/logo.svg", alt="")
+          a(href="#").cart
+            .cart-icon
+              +icon("cart","icon")
+              .cart-val 1
+          .lang-toggle
+            a(href="#").lang-toggle__el.lang-toggle__el--active RU
+            a(href="#").lang-toggle__el EN
+
+        .mobile-menu
+          -
+            var items = [
+            "главная",
+            "cамолеты",
+            "запчасти",
+            "лазерная резка",
+            "доставка",
+            ];
+          each item in items
+            a(href="#").mobile-menu__el #{item}
+          .mobile-menu__el.modal-get(data-modal="warranty") гарантия
+          .mobile-menu__el.modal-get(data-modal="contact") контакты
+        a(href="#").mobile-lk
+          +icon("user","icon")
+          span Личный кабинет
+        .mobile-phone
+          .mobile-phone__icon
+            +icon("phone-call","icon")
+          .mobile-phone-cont
+            a(href="tel:+7 495 312 31 12").mobile-phone__val +7 495 312 31 12
+            a(href="mailto").mobile-mail info@mail.ru
 
 mixin icon(name,cls)
   svg(class=cls)

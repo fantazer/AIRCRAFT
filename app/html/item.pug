@@ -11,11 +11,16 @@ include block_html/_include.pug
 					.gallery-img
 						.gallery-main-slider
 							- for (var i=0;i<3;i++)
-								.gallery-main-slider__el(style="background-image:url('img/aircraft-1.jpg')")
-								.gallery-main-slider__el(style="background-image:url('img/aircraft-2.jpg')")
-								.gallery-main-slider__el(style="background-image:url('img/aircraft-3.jpg')")
-								.gallery-main-slider__el(style="background-image:url('img/aircraft-4.jpg')")
-								.gallery-main-slider__el(style="background-image:url('img/aircraft-5.jpg')")
+								.gallery-main-slider__el-wrap
+									.gallery-main-slider__el(style="background-image:url('img/aircraft-1.jpg')")
+								.gallery-main-slider__el-wrap
+									.gallery-main-slider__el(style="background-image:url('img/aircraft-2.jpg')")
+								.gallery-main-slider__el-wrap
+									.gallery-main-slider__el(style="background-image:url('img/aircraft-3.jpg')")
+								.gallery-main-slider__el-wrap
+									.gallery-main-slider__el(style="background-image:url('img/aircraft-4.jpg')")
+								.gallery-main-slider__el-wrap
+									.gallery-main-slider__el(style="background-image:url('img/aircraft-5.jpg')")
 						.slider-wrap.slider-wrap--simple
 							.slider-control.slider-control--left
 								+icon("arrow-left--height","icon")
@@ -23,11 +28,16 @@ include block_html/_include.pug
 								+icon("arrow-right--height","icon")
 							.gallery-nav-slider.slider-item
 								- for (var i=0;i<3;i++)
-									.gallery-nav-slider__el(style="background-image:url('img/aircraft-1.jpg')")
-									.gallery-nav-slider__el(style="background-image:url('img/aircraft-2.jpg')")
-									.gallery-nav-slider__el(style="background-image:url('img/aircraft-3.jpg')")
-									.gallery-nav-slider__el(style="background-image:url('img/aircraft-4.jpg')")
-									.gallery-nav-slider__el(style="background-image:url('img/aircraft-5.jpg')")
+									.gallery-nav-slider__el-wrap
+										.gallery-nav-slider__el(style="background-image:url('img/aircraft-1.jpg')")
+									.gallery-nav-slider__el-wrap
+										.gallery-nav-slider__el(style="background-image:url('img/aircraft-2.jpg')")
+									.gallery-nav-slider__el-wrap
+										.gallery-nav-slider__el(style="background-image:url('img/aircraft-3.jpg')")
+									.gallery-nav-slider__el-wrap
+										.gallery-nav-slider__el(style="background-image:url('img/aircraft-4.jpg')")
+									.gallery-nav-slider__el-wrap
+										.gallery-nav-slider__el(style="background-image:url('img/aircraft-5.jpg')")
 					.product-info
 						.product-title 3D Stick размах 2.1 м.
 						.product-descr.text
