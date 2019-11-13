@@ -1109,7 +1109,6 @@ thead
 	bg-full()
 	cp()
 .gallery-nav-slider
-
 	.slick-current
 		tr()
 		background-color: black
@@ -1140,7 +1139,8 @@ thead
 	+below(640px)
 		width: 100%
 		margin-bottom: 30px
-
+	position relative
+	z-index 1
 	width: 55%
 
 .product-wrap
@@ -2486,3 +2486,30 @@ thead
 		width: 100px
 	.lang-toggle
 		margin-left: auto
+
+.modal
+	transform none
+	opacity: 0
+	left -9999px
+.modal__show
+	opacity: 1
+	left 0
+
+.loader
+	position: fixed
+	top 0
+	left 0
+	width: 100%
+	height 100%
+	flex(mid)
+	background: #ffffffde
+	z-index 999
+
+@keyframes rotation
+		from
+				transform: rotate(0)
+		to
+			transform: rotate(359deg)
+
+.loader-icon
+	animation: rotation 2s infinite linear

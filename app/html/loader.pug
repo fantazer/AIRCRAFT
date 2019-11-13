@@ -1,0 +1,40 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+style(type='text/css').
+	.btn--md {
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+
+	.btn-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		flex-flow: column;
+		align-items: baseline;
+	}
+
+.page
+	+header("black")
+	.content
+		.main-cont
+			p Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"
+			p Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send
+			.btn-wrap
+				.btn--md.btn--mark.modal-get(data-modal="warranty") Гарантия | data-modal="warranty"
+				.btn--md.btn--mark.modal-get(data-modal="contact") Контакты | data-modal="contact"
+				.btn--md.btn--mark.modal-get(data-modal="truemessage") Успешное действие | data-modal="truemessage"
+				.btn--md.btn--mark.modal-get(data-modal="profile-edit") Изменить профиль | data-modal="profile-edit"
+				.btn--md.btn--mark.modal-get(data-modal="adress-add") Добавить адрес | data-modal="adress-add"
+				.btn--md.btn--mark.modal-get(data-modal="adress-edit") Изменить адрес | data-modal="adress-edit"
+				.btn--md.btn--mark.modal-get(data-modal="login") Вход | data-modal="login"
+
+	+footer("black")
+
+//loader
+.loader
+	.loader-icon
+		img(src="img/loader.png", alt="")
+//loader === end
+
+include ./block_html/_script.pug
